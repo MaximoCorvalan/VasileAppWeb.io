@@ -1,0 +1,110 @@
+﻿@page "/"
+@page "/auth/login"
+@layout LoginLayout
+
+@inject HttpClient httpClient
+@inject NavigationManager navigationManager
+@inject IHttpContextAccessor HttpContextAccessor
+@inject IJSRuntime JS
+
+
+<div class="contenedor-centrado-login">
+    <div class="container-login @((showError ? "error" : ""))">
+        <div class="heading"><img src="https://i.ibb.co/F3KrZH2/Logo-Vasile-Sin-Sombra.png" alt="Alternate Text" style="width: 60px; height: 60px;margin-bottom:10px" /></div>
+        <EditForm class="form-login" Model="LoginModel" method="Post" OnValidSubmit="LoginUserAsync" FormName="@LoginForm">
+            <DataAnnotationsValidator />
+            <InputText placeholder="Correo electronico" type="email" @bind-Value="LoginModel.Correo" class="mt-1 w-100 border border-1 border-secondary shadow p-3" style="height:45px; border-radius: 20px;" />
+            <ValidationMessage For="()=> LoginModel.Correo" />
+          
+            <InputText placeholder="Contraseña" type="password" class="mt-2 w-100  border border-1 border-secondary shadow p-3" style="height:45px; border-radius: 20px;" @bind-Value="LoginModel.Clave" />
+            <ValidationMessage For="()=> LoginModel.Clave" />
+
+            <div class="mt-2">
+                <InputCheckbox class="form-check-input" @bind-Value="this.RememberMe" />
+                Recordarme
+            </div>
+            <button type="submit"  class="login-button">Ingresar</button>
+        </EditForm>
+        @if (showError)
+        {
+
+            <p class="text-danger"><b>Usuario o contraseña incorrectos</b></p>
+        }
+        else
+        {
+            <p class="agreement">Si no posee con usuario, revise su casilla de mail sino comunicarse a rrhh@vasile.com.ar</p>
+
+        }
+
+      
+    </div>
+</div>
+
+
+@code {
+    private const string LoginForm = "login-form";
+    private bool showError;
+    [SupplyParameterFromForm(FormName = LoginForm)]
+    private Usuario LoginModel { get; set; } = new Usuario();
+
+    private bool RememberMe { get; set; }
+
+
+    private async Task LoginUserAsync()
+    {
+        bool InicioExitoso = false;
+        try
+        {
+            var loginResponse = await httpClient.PostAsJsonAsync("api/Usuario/Login", LoginModel);
+
+            if (loginResponse.IsSuccessStatusCode)
+            {
+                var sesionUsuario = await loginResponse.Content.ReadFromJsonAsync<Sesion>();
+
+
+                if (sesionUsuario != null) // DE ACA SALE LA VARIABLE CONTEXT DEL HOME LA AUTENTICACION 
+                {
+                    var claims = sesionUsuario.ToClaims();
+                    var identity = new ClaimsIdentity(claims, Constantes.AuthScheme);
+                    var principal = new ClaimsPrincipal(identity);
+
+
+                    await HttpContextAccessor.HttpContext!.SignInAsync(Constantes.AuthScheme, principal, new AuthenticationProperties
+                        {
+                            IsPersistent = RememberMe
+                        });
+
+                    InicioExitoso = true;
+                }
+                else
+                {
+
+                    showError = true;
+
+                    // Maneja el caso en que el inicio de sesión no devuelve una sesión válida
+                    Console.WriteLine("Inicio de sesión fallido o sesión nula.");
+                }
+            }
+            else
+            {
+
+                // Maneja el caso en que la respuesta del inicio de sesión no es exitosa
+                showError = true;
+                Console.WriteLine($"Error de inicio de sesión: {loginResponse.ReasonPhrase}");
+            }
+        }
+        catch (Exception ex)
+        {
+
+            return;
+        }
+        finally
+        {
+            if (InicioExitoso)
+            {
+                navigationManager.NavigateTo("/home");
+            }
+          
+        }
+    }
+}

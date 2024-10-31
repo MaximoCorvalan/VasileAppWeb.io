@@ -1,0 +1,123 @@
+C:\Users\Programador2\source\repos\MiVasile\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\Programador2\source\repos\MiVasile\bin\Debug\net8.0\appsettings.json
+C:\Users\Programador2\source\repos\MiVasile\bin\Debug\net8.0\MiVasile.staticwebassets.runtime.json
+C:\Users\Programador2\source\repos\MiVasile\bin\Debug\net8.0\MiVasile.exe
+C:\Users\Programador2\source\repos\MiVasile\bin\Debug\net8.0\MiVasile.deps.json
+C:\Users\Programador2\source\repos\MiVasile\bin\Debug\net8.0\MiVasile.runtimeconfig.json
+C:\Users\Programador2\source\repos\MiVasile\bin\Debug\net8.0\MiVasile.dll
+C:\Users\Programador2\source\repos\MiVasile\bin\Debug\net8.0\MiVasile.pdb
+C:\Users\Programador2\source\repos\MiVasile\bin\Debug\net8.0\Blazored.LocalStorage.dll
+C:\Users\Programador2\source\repos\MiVasile\bin\Debug\net8.0\Blazored.SessionStorage.dll
+C:\Users\Programador2\source\repos\MiVasile\bin\Debug\net8.0\Microsoft.AspNetCore.Authorization.dll
+C:\Users\Programador2\source\repos\MiVasile\bin\Debug\net8.0\Microsoft.AspNetCore.Components.dll
+C:\Users\Programador2\source\repos\MiVasile\bin\Debug\net8.0\Microsoft.AspNetCore.Components.Authorization.dll
+C:\Users\Programador2\source\repos\MiVasile\bin\Debug\net8.0\Microsoft.AspNetCore.Metadata.dll
+C:\Users\Programador2\source\repos\MiVasile\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Programador2\source\repos\MiVasile\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\Programador2\source\repos\MiVasile\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+C:\Users\Programador2\source\repos\MiVasile\bin\Debug\net8.0\System.Data.SqlClient.dll
+C:\Users\Programador2\source\repos\MiVasile\bin\Debug\net8.0\runtimes\win-arm64\native\sni.dll
+C:\Users\Programador2\source\repos\MiVasile\bin\Debug\net8.0\runtimes\win-x64\native\sni.dll
+C:\Users\Programador2\source\repos\MiVasile\bin\Debug\net8.0\runtimes\win-x86\native\sni.dll
+C:\Users\Programador2\source\repos\MiVasile\bin\Debug\net8.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Programador2\source\repos\MiVasile\bin\Debug\net8.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Programador2\source\repos\MiVasile\bin\Debug\net8.0\MiVasile.Domain.dll
+C:\Users\Programador2\source\repos\MiVasile\bin\Debug\net8.0\MiVasile.Infrastructure.dll
+C:\Users\Programador2\source\repos\MiVasile\bin\Debug\net8.0\MiVasile.Domain.pdb
+C:\Users\Programador2\source\repos\MiVasile\bin\Debug\net8.0\MiVasile.Infrastructure.pdb
+C:\Users\Programador2\source\repos\MiVasile\obj\Debug\net8.0\MiVasile.csproj.AssemblyReference.cache
+C:\Users\Programador2\source\repos\MiVasile\obj\Debug\net8.0\MiVasile.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Programador2\source\repos\MiVasile\obj\Debug\net8.0\MiVasile.AssemblyInfoInputs.cache
+C:\Users\Programador2\source\repos\MiVasile\obj\Debug\net8.0\MiVasile.AssemblyInfo.cs
+C:\Users\Programador2\source\repos\MiVasile\obj\Debug\net8.0\MiVasile.csproj.CoreCompileInputs.cache
+C:\Users\Programador2\source\repos\MiVasile\obj\Debug\net8.0\MiVasile.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Programador2\source\repos\MiVasile\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Programador2\source\repos\MiVasile\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\Programador2\source\repos\MiVasile\obj\Debug\net8.0\staticwebassets\msbuild.MiVasile.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\Programador2\source\repos\MiVasile\obj\Debug\net8.0\staticwebassets\msbuild.build.MiVasile.props
+C:\Users\Programador2\source\repos\MiVasile\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.MiVasile.props
+C:\Users\Programador2\source\repos\MiVasile\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.MiVasile.props
+C:\Users\Programador2\source\repos\MiVasile\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Users\Programador2\source\repos\MiVasile\obj\Debug\net8.0\scopedcss\Components\Layout\MainLayout.razor.rz.scp.css
+C:\Users\Programador2\source\repos\MiVasile\obj\Debug\net8.0\scopedcss\Components\Layout\NavMenu.razor.rz.scp.css
+C:\Users\Programador2\source\repos\MiVasile\obj\Debug\net8.0\scopedcss\Components\Pages\Auth\Login.razor.rz.scp.css
+C:\Users\Programador2\source\repos\MiVasile\obj\Debug\net8.0\scopedcss\Components\Pages\Auth\NoAuthorizationPage.razor.rz.scp.css
+C:\Users\Programador2\source\repos\MiVasile\obj\Debug\net8.0\scopedcss\Components\Pages\Home.razor.rz.scp.css
+C:\Users\Programador2\source\repos\MiVasile\obj\Debug\net8.0\scopedcss\Components\Pages\User\MyProfile.razor.rz.scp.css
+C:\Users\Programador2\source\repos\MiVasile\obj\Debug\net8.0\scopedcss\bundle\MiVasile.styles.css
+C:\Users\Programador2\source\repos\MiVasile\obj\Debug\net8.0\scopedcss\projectbundle\MiVasile.bundle.scp.css
+C:\Users\Programador2\source\repos\MiVasile\obj\Debug\net8.0\MiVasile.csproj.Up2Date
+C:\Users\Programador2\source\repos\MiVasile\obj\Debug\net8.0\MiVasile.dll
+C:\Users\Programador2\source\repos\MiVasile\obj\Debug\net8.0\refint\MiVasile.dll
+C:\Users\Programador2\source\repos\MiVasile\obj\Debug\net8.0\MiVasile.pdb
+C:\Users\Programador2\source\repos\MiVasile\obj\Debug\net8.0\MiVasile.genruntimeconfig.cache
+C:\Users\Programador2\source\repos\MiVasile\obj\Debug\net8.0\ref\MiVasile.dll
+C:\Users\Programador2\source\repos\MiVasile\obj\Debug\net8.0\scopedcss\Components\Pages\Admin\ReceiptControl.razor.rz.scp.css
+C:\Users\Programador2\source\repos\MiVasile\obj\Debug\net8.0\scopedcss\Components\Pages\Admin\NewUser.razor.rz.scp.css
+C:\Users\Programador2\source\repos\MiVasile\obj\Debug\net8.0\scopedcss\Components\Pages\User\MyReceipts.razor.rz.scp.css
+C:\Users\Programador2\Desktop\Proyectos Nico\_MiVasile\MiVasile\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\Programador2\Desktop\Proyectos Nico\_MiVasile\MiVasile\bin\Debug\net8.0\appsettings.json
+C:\Users\Programador2\Desktop\Proyectos Nico\_MiVasile\MiVasile\bin\Debug\net8.0\MiVasile.staticwebassets.runtime.json
+C:\Users\Programador2\Desktop\Proyectos Nico\_MiVasile\MiVasile\bin\Debug\net8.0\MiVasile.exe
+C:\Users\Programador2\Desktop\Proyectos Nico\_MiVasile\MiVasile\bin\Debug\net8.0\MiVasile.deps.json
+C:\Users\Programador2\Desktop\Proyectos Nico\_MiVasile\MiVasile\bin\Debug\net8.0\MiVasile.runtimeconfig.json
+C:\Users\Programador2\Desktop\Proyectos Nico\_MiVasile\MiVasile\bin\Debug\net8.0\MiVasile.dll
+C:\Users\Programador2\Desktop\Proyectos Nico\_MiVasile\MiVasile\bin\Debug\net8.0\MiVasile.pdb
+C:\Users\Programador2\Desktop\Proyectos Nico\_MiVasile\MiVasile\bin\Debug\net8.0\Blazored.LocalStorage.dll
+C:\Users\Programador2\Desktop\Proyectos Nico\_MiVasile\MiVasile\bin\Debug\net8.0\Blazored.SessionStorage.dll
+C:\Users\Programador2\Desktop\Proyectos Nico\_MiVasile\MiVasile\bin\Debug\net8.0\Microsoft.AspNetCore.Authorization.dll
+C:\Users\Programador2\Desktop\Proyectos Nico\_MiVasile\MiVasile\bin\Debug\net8.0\Microsoft.AspNetCore.Components.dll
+C:\Users\Programador2\Desktop\Proyectos Nico\_MiVasile\MiVasile\bin\Debug\net8.0\Microsoft.AspNetCore.Components.Authorization.dll
+C:\Users\Programador2\Desktop\Proyectos Nico\_MiVasile\MiVasile\bin\Debug\net8.0\Microsoft.AspNetCore.Metadata.dll
+C:\Users\Programador2\Desktop\Proyectos Nico\_MiVasile\MiVasile\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Programador2\Desktop\Proyectos Nico\_MiVasile\MiVasile\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\Programador2\Desktop\Proyectos Nico\_MiVasile\MiVasile\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+C:\Users\Programador2\Desktop\Proyectos Nico\_MiVasile\MiVasile\bin\Debug\net8.0\System.Data.SqlClient.dll
+C:\Users\Programador2\Desktop\Proyectos Nico\_MiVasile\MiVasile\bin\Debug\net8.0\runtimes\win-arm64\native\sni.dll
+C:\Users\Programador2\Desktop\Proyectos Nico\_MiVasile\MiVasile\bin\Debug\net8.0\runtimes\win-x64\native\sni.dll
+C:\Users\Programador2\Desktop\Proyectos Nico\_MiVasile\MiVasile\bin\Debug\net8.0\runtimes\win-x86\native\sni.dll
+C:\Users\Programador2\Desktop\Proyectos Nico\_MiVasile\MiVasile\bin\Debug\net8.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Programador2\Desktop\Proyectos Nico\_MiVasile\MiVasile\bin\Debug\net8.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Programador2\Desktop\Proyectos Nico\_MiVasile\MiVasile\bin\Debug\net8.0\MiVasile.Domain.dll
+C:\Users\Programador2\Desktop\Proyectos Nico\_MiVasile\MiVasile\bin\Debug\net8.0\MiVasile.Infrastructure.dll
+C:\Users\Programador2\Desktop\Proyectos Nico\_MiVasile\MiVasile\bin\Debug\net8.0\MiVasile.Domain.pdb
+C:\Users\Programador2\Desktop\Proyectos Nico\_MiVasile\MiVasile\bin\Debug\net8.0\MiVasile.Infrastructure.pdb
+C:\Users\Programador2\Desktop\Proyectos Nico\_MiVasile\MiVasile\obj\Debug\net8.0\MiVasile.csproj.AssemblyReference.cache
+C:\Users\Programador2\Desktop\Proyectos Nico\_MiVasile\MiVasile\obj\Debug\net8.0\MiVasile.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Programador2\Desktop\Proyectos Nico\_MiVasile\MiVasile\obj\Debug\net8.0\MiVasile.AssemblyInfoInputs.cache
+C:\Users\Programador2\Desktop\Proyectos Nico\_MiVasile\MiVasile\obj\Debug\net8.0\MiVasile.AssemblyInfo.cs
+C:\Users\Programador2\Desktop\Proyectos Nico\_MiVasile\MiVasile\obj\Debug\net8.0\MiVasile.csproj.CoreCompileInputs.cache
+C:\Users\Programador2\Desktop\Proyectos Nico\_MiVasile\MiVasile\obj\Debug\net8.0\MiVasile.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Programador2\Desktop\Proyectos Nico\_MiVasile\MiVasile\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Programador2\Desktop\Proyectos Nico\_MiVasile\MiVasile\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\Programador2\Desktop\Proyectos Nico\_MiVasile\MiVasile\obj\Debug\net8.0\staticwebassets\msbuild.MiVasile.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\Programador2\Desktop\Proyectos Nico\_MiVasile\MiVasile\obj\Debug\net8.0\staticwebassets\msbuild.build.MiVasile.props
+C:\Users\Programador2\Desktop\Proyectos Nico\_MiVasile\MiVasile\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.MiVasile.props
+C:\Users\Programador2\Desktop\Proyectos Nico\_MiVasile\MiVasile\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.MiVasile.props
+C:\Users\Programador2\Desktop\Proyectos Nico\_MiVasile\MiVasile\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Users\Programador2\Desktop\Proyectos Nico\_MiVasile\MiVasile\obj\Debug\net8.0\scopedcss\Components\Layout\MainLayout.razor.rz.scp.css
+C:\Users\Programador2\Desktop\Proyectos Nico\_MiVasile\MiVasile\obj\Debug\net8.0\scopedcss\Components\Layout\NavMenu.razor.rz.scp.css
+C:\Users\Programador2\Desktop\Proyectos Nico\_MiVasile\MiVasile\obj\Debug\net8.0\scopedcss\Components\Pages\Admin\NewUser.razor.rz.scp.css
+C:\Users\Programador2\Desktop\Proyectos Nico\_MiVasile\MiVasile\obj\Debug\net8.0\scopedcss\Components\Pages\Admin\ReceiptControl.razor.rz.scp.css
+C:\Users\Programador2\Desktop\Proyectos Nico\_MiVasile\MiVasile\obj\Debug\net8.0\scopedcss\Components\Pages\Auth\Login.razor.rz.scp.css
+C:\Users\Programador2\Desktop\Proyectos Nico\_MiVasile\MiVasile\obj\Debug\net8.0\scopedcss\Components\Pages\Auth\NoAuthorizationPage.razor.rz.scp.css
+C:\Users\Programador2\Desktop\Proyectos Nico\_MiVasile\MiVasile\obj\Debug\net8.0\scopedcss\Components\Pages\Home.razor.rz.scp.css
+C:\Users\Programador2\Desktop\Proyectos Nico\_MiVasile\MiVasile\obj\Debug\net8.0\scopedcss\Components\Pages\User\MyProfile.razor.rz.scp.css
+C:\Users\Programador2\Desktop\Proyectos Nico\_MiVasile\MiVasile\obj\Debug\net8.0\scopedcss\Components\Pages\User\MyReceipts.razor.rz.scp.css
+C:\Users\Programador2\Desktop\Proyectos Nico\_MiVasile\MiVasile\obj\Debug\net8.0\scopedcss\bundle\MiVasile.styles.css
+C:\Users\Programador2\Desktop\Proyectos Nico\_MiVasile\MiVasile\obj\Debug\net8.0\scopedcss\projectbundle\MiVasile.bundle.scp.css
+C:\Users\Programador2\Desktop\Proyectos Nico\_MiVasile\MiVasile\obj\Debug\net8.0\MiVasile.csproj.Up2Date
+C:\Users\Programador2\Desktop\Proyectos Nico\_MiVasile\MiVasile\obj\Debug\net8.0\MiVasile.dll
+C:\Users\Programador2\Desktop\Proyectos Nico\_MiVasile\MiVasile\obj\Debug\net8.0\refint\MiVasile.dll
+C:\Users\Programador2\Desktop\Proyectos Nico\_MiVasile\MiVasile\obj\Debug\net8.0\MiVasile.pdb
+C:\Users\Programador2\Desktop\Proyectos Nico\_MiVasile\MiVasile\obj\Debug\net8.0\MiVasile.genruntimeconfig.cache
+C:\Users\Programador2\Desktop\Proyectos Nico\_MiVasile\MiVasile\obj\Debug\net8.0\ref\MiVasile.dll
+C:\Users\Programador2\Desktop\Proyectos Nico\_MiVasile\MiVasile\bin\Debug\net8.0\BouncyCastle.Cryptography.dll
+C:\Users\Programador2\Desktop\Proyectos Nico\_MiVasile\MiVasile\bin\Debug\net8.0\MailKit.dll
+C:\Users\Programador2\Desktop\Proyectos Nico\_MiVasile\MiVasile\bin\Debug\net8.0\MimeKit.dll
+C:\Users\Programador2\Desktop\Proyectos Nico\_MiVasile\MiVasile\bin\Debug\net8.0\Microsoft.Identity.Client.dll
+C:\Users\Programador2\Desktop\Proyectos Nico\_MiVasile\MiVasile\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\Programador2\Desktop\Proyectos Nico\_MiVasile\MiVasile\obj\Debug\net8.0\scopedcss\Components\MoreComponents\Profile.razor.rz.scp.css
+C:\Users\Programador2\Desktop\Proyectos Nico\_MiVasile\MiVasile\obj\Debug\net8.0\scopedcss\Components\Pages\User\PersonalData.razor.rz.scp.css
+C:\Users\Programador2\Desktop\Proyectos Nico\_MiVasile\MiVasile\obj\Debug\net8.0\scopedcss\Components\Pages\User\License.razor.rz.scp.css
+C:\Users\Programador2\Desktop\Proyectos Nico\_MiVasile\MiVasile\obj\Debug\net8.0\scopedcss\Components\Pages\Admin\RegisterLicense.razor.rz.scp.css

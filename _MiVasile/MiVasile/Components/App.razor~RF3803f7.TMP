@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<base href="/" />
+
+<!-- Bootstrap CSS debe ir primero si quieres que sea la base de tus estilos -->
+<link rel="stylesheet" href="bootstrap/bootstrap.min.css" />
+
+<!-- Estilos globales de la aplicación -->
+<link rel="stylesheet" href="app.css" />
+
+<!-- Archivos de estilos específicos del proyecto o animaciones, que pueden sobrescribir Bootstrap o app.css -->
+<link rel="stylesheet" href="MiVasile.styles.css" />
+
+<!-- Librería de animaciones, si la necesitas (debería ir después si contiene efectos específicos) -->
+<link rel="stylesheet" href="~/animate/animate.min.css" />
+
+<!-- Ícono del sitio web -->
+<link rel="icon" type="image/png" href="LogoVasileSinSombra.png" />
+
+
+
+    <HeadOutlet />
+</head>
+
+<body>
+    <Routes />
+    <script src="_framework/blazor.web.js"></script>
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+
+</html>

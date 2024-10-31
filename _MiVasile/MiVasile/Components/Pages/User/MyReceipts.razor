@@ -1,0 +1,160 @@
+﻿@page "/myReceipts"
+@using MiVasile.Infrastructure.Business
+@inject AuthenticationStateProvider authenticationStateProvider
+@inject NavigationManager navigationManager
+@inject IJSRuntime jsRuntime
+@rendermode InteractiveServer
+
+<PageTitle>Mis Recibos</PageTitle>
+
+
+<div style="position: relative; top: 50px">
+
+    <div class="menuseleccion overflow-hidden">
+        @if (Documentos.Count > 0)
+        {
+            <div class="d-flex justify-content-center align-items-center fs-4 bg-primary bg-opacity-75 font-monospace text-light fw-bolder">Recibos de sueldo adjuntos</div>
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">Descipcion</th>
+                        <th scope="col">Fecha de Emision</th>
+                        <th scope="col">Estado</th>
+                        <th scope="col">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var recibo in Documentos)
+                    {
+                        string url = recibo.Ruta;
+                      
+                        <tr>
+                            <td>@recibo.Descripcion</td>
+                            <td>@recibo.Fecha_Publicacion?.ToString("dd/MM/yyyy")</td>
+                            <td>
+                                @if (recibo.Conformidad)
+                                {
+                                    <p class="text-success">Conforme</p>
+                                }
+                                else
+                                {
+                                    <p class="text-danger">Sin Conformidad</p>
+                                }
+                            </td>
+                            <td>
+                                <div class="d-flex">
+                                    @if (!recibo.Conformidad)
+                                    {
+                                        <button class="edit-button" @onclick="async () => {
+                                            await Documento_Business.UpdateConformidadAsync(recibo.ID_Documento);
+                                            await CargarDocumentosUsuario();
+                                            StateHasChanged();
+                                        }">
+                                            <svg class="edit-svgIcon" viewBox="0 0 512 512">
+                                                <path d="M410.3 231l11.3-11.3-33.9-33.9-62.1-62.1L291.7 89.8l-11.3 11.3-22.6 22.6L58.6 322.9c-10.4 10.4-18 23.3-22.2 37.4L1 480.7c-2.5 8.4-.2 17.5 6.1 23.7s15.3 8.5 23.7 6.1l120.3-35.4c14.1-4.2 27-11.8 37.4-22.2L387.7 253.7 410.3 231zM160 399.4l-9.1 22.7c-4 3.1-8.5 5.4-13.3 6.9L59.4 452l23-78.1c1.4-4.9 3.8-9.4 6.9-13.3l22.7-9.1v32c0 8.8 7.2 16 16 16h32zM362.7 18.7L348.3 33.2 325.7 55.8 314.3 67.1l33.9 33.9 62.1 62.1 33.9 33.9 11.3-11.3 22.6-22.6 14.5-14.5c25-25 25-65.5 0-90.5L453.3 18.7c-25-25-65.5-25-90.5 0zm-47.4 168l-144 144c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6l144-144c6.2-6.2 16.4-6.2 22.6 0s6.2 16.4 0 22.6z"></path>
+                                            </svg>
+                                        </button>
+                                    }
+                                    else
+                                    {
+                                        <button class="Btn" @onclick="() => AbrirDocumento(recibo.Ruta)">
+                                            <svg class="svgIcon"
+                                                 viewBox="0 0 384 512"
+                                                 height="1em"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M169.4 470.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 370.8 224 64c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 306.7L54.6 265.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"></path>
+                                            </svg>
+                                            <span class="icon2"></span>
+                                            <span class="tooltip">Descargar</span>
+                                        </button>
+                                    }
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+        else
+        {
+            <div class="d-flex justify-content-center align-items-center fs-4 bg-danger bg-opacity-75 font-monospace text-light fw-bolder">No tiene recibos adjuntos por el momento</div>
+        }
+    </div>
+</div>
+
+
+@code {
+    
+    private List<Documento> Documentos { get; set; } = new();
+    private List<Claim> Claims { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        var auth = await authenticationStateProvider.GetAuthenticationStateAsync();
+        var user = auth.User;
+
+        if (user.Identity != null && user.Identity.IsAuthenticated)
+        {
+            Claims = user.Claims.ToList();
+            await CargarDocumentosUsuario();
+        }
+
+    }
+
+    private async Task CargarDocumentosUsuario()
+    {
+        try
+        {
+            Documento_Business documento_Business = new Documento_Business();
+            Documentos = await documento_Business.GetAllAsync();
+
+            if (Documentos.Count > 0)
+            {
+                int Id_Usuario = Convert.ToInt32(Claims[0].Value);
+                var Encontrado = Documentos.Where(x => x.ID_Usuario == Id_Usuario);
+
+                if (Encontrado.Any())
+                    Documentos = Encontrado.ToList();
+                else
+                    Documentos = new List<Documento>();
+            }
+        }
+        catch (Exception)
+        {
+
+            throw;
+        }
+    }
+
+
+
+
+    private  void AbrirDocumento(string url)
+     {
+         try
+         {
+            
+            navigationManager.NavigateTo(url);//NO ME ANDA NI EL DESCARGAR NI VER
+
+
+         }catch (Exception)
+         {
+             navigationManager.NavigateTo("/error");
+         }
+     }
+
+    private async Task DescargarDocumento(string url)//NO ME ANDA NI EL DESCARGAR NI VER
+    {
+        try
+        {
+            string filePathWithoutQuotes = url.Replace("\"", "");
+            await jsRuntime.InvokeVoidAsync("downloadFile", filePathWithoutQuotes);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error al descargar el documento: {ex.Message}");
+            navigationManager.NavigateTo("/error");
+        }
+    }
+
+}

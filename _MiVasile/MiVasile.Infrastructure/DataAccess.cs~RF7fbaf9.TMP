@@ -1,0 +1,106 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Data.SqlClient;
+using System.Collections;
+
+namespace MiVasile.Infrastructure
+{
+    public static class DataAccess
+    {
+        public static string ConnectionString { get; set; }
+        public static SqlCommand Command { get; set; }
+        public static SqlConnection Connection { get; set; }
+        static DataAccess()
+        {
+            ConnectionString = "Data Source= 192.168.1.145; Initial Catalog= MiVasileAppWeb; User= sa; Password= Vasile123";
+            Connection = new SqlConnection(ConnectionString);
+        }
+
+        public static void AbrirConexion()
+        {
+            Connection.Open();
+        }
+
+        public static void CerrarConexion()
+        {
+            Connection.Close();
+        }
+
+        public static async Task<SqlDataReader> GetReaderAsync(string sql)
+        {
+            try
+            {
+                using (Command = new SqlCommand(sql, Connection))
+                {
+                    return await Command.ExecuteReaderAsync();
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+
+        public static async Task<int> obtenerCantFilas(string sql)
+        {
+            using (SqlDataReader reader = await GetReaderAsync(sql))
+            {
+                if (await reader.ReadAsync()) // Mueve el cursor al primer registro
+                {
+                    // Asegúrate de que el resultado es un número entero
+                    return Convert.ToInt32(reader[0]);
+                }
+            }
+
+            return 0; // Devuelve 0 si no hay registros
+        }
+
+
+        public static async Task<bool> ExecCommandAsync(string query)
+        {
+            try
+            {
+                using (Command = new SqlCommand(query, Connection))
+                {
+                    int filasAfectadas = await Command.ExecuteNonQueryAsync();
+
+                    return filasAfectadas > 0;
+                }
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
+        public static async Task<bool> ExecStoredProcedureAsync(string storedProcedureName, List<SqlParameter> parameters)
+        {
+            try
+            {
+                using (Command = new SqlCommand(storedProcedureName, Connection))
+                {
+                    Command.CommandType = System.Data.CommandType.StoredProcedure;
+
+                    // Agregar los parámetros al comando
+                    if (parameters != null)
+                    {
+                        Command.Parameters.AddRange(parameters.ToArray());
+                    }
+
+                    // Ejecutar el procedimiento almacenado
+                    int filasAfectadas = await Command.ExecuteNonQueryAsync();
+
+                    return filasAfectadas > 0;
+                }
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+    }
+}

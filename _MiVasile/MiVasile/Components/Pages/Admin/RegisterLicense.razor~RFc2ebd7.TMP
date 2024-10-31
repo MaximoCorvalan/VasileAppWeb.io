@@ -1,0 +1,154 @@
+﻿@rendermode InteractiveServer
+@page "/admin/registrarLicencia"
+@attribute [Authorize(Roles = "Admin")]
+@inject IJSRuntime JS
+
+
+
+
+
+
+
+<div class="contenedor-centrado">
+    <div class="container-form">
+        <h1 class="fontSegoe text-center">Asignar Licencia</h1>
+        <div class="row-cols-2 d-flex justify-content-center align-items-center px-5">
+            <div class="col ps-4">
+
+                <div class="inputLegajo">
+                    <input type="text" @bind="legajo" required="" />
+                    <label>
+                        <span style="transition-delay:0ms">L</span><span style="transition-delay:50ms">e</span><span style="transition-delay:100ms">g</span><span style="transition-delay:150ms">a</span><span style="transition-delay:200ms">j</span><span style="transition-delay:200ms">o</span>
+                    </label>
+                </div>
+
+                <!-- DROPDOWNLIST-->
+
+                <div>
+
+                   <p class="txtTipoLicencia">Tipo de licencia :</p>
+           
+                    <!-- Dropdown list -->
+                    <select @bind="tipoLicencia" class="ddlTipo">
+                        <option value="Vacaciones">Vacaciones</option>
+                        <option value="Licencia sin goze de sueldo">Licencia sin goze de sueldo</option>
+                        <option value="Otros">Otros</option>
+                    
+                    </select>
+
+      
+                </div>
+
+
+                <!-- FINALIZA DROPDOWN LIST-->
+
+
+                <div class="inputLegajo">
+                    <input type="text" @bind="DescripcionLicencia" required="" />
+                    <label>
+                        <span style="transition-delay:0ms">D</span><span style="transition-delay:50ms">e</span><span style="transition-delay:100ms">s</span><span style="transition-delay:150ms">c</span><span style="transition-delay:200ms">r</span><span style="transition-delay:200ms">i</span><span style="transition-delay:200ms">p</span><span style="transition-delay:200ms">c</span><span style="transition-delay:200ms">i</span><span style="transition-delay:200ms">ó</span><span style="transition-delay:200ms">n</span>
+                    </label>
+                </div>
+           
+                <div class="inputLegajo">
+                    <input type="date" required="" @bind-value="IncioLicencia" />
+                    <label>
+                        <span style="transition-delay:0ms">F</span><span style="transition-delay:50ms">e</span><span style="transition-delay:100ms">c</span><span style="transition-delay:150ms">h</span><span style="transition-delay:200ms">a</span><span style="transition-delay:250ms"> </span><span style="transition-delay:250ms">d</span><span style="transition-delay:250ms">e</span><span style="transition-delay:250ms"> </span><span style="transition-delay:250ms">i</span><span style="transition-delay:250ms">n</span><span style="transition-delay:250ms">i</span><span style="transition-delay:250ms">c</span><span style="transition-delay:250ms">i</span><span style="transition-delay:250ms">o</span>
+                   
+                    </label>
+                </div>
+                <div class="inputLegajo">
+                    <input type="date" required="" @bind-value="FinLicencia" />
+                    <label>
+                        <span style="transition-delay:0ms">F</span><span style="transition-delay:50ms">e</span><span style="transition-delay:100ms">c</span><span style="transition-delay:150ms">h</span><span style="transition-delay:200ms">a</span><span style="transition-delay:250ms"> </span><span style="transition-delay:250ms">d</span><span style="transition-delay:250ms">e</span><span style="transition-delay:250ms"> </span><span style="transition-delay:250ms">d</span><span style="transition-delay:250ms">e</span><span style="transition-delay:250ms"> </span><span style="transition-delay:250ms">r</span><span style="transition-delay:250ms">e</span><span style="transition-delay:250ms">g</span><span style="transition-delay:250ms">r</span><span style="transition-delay:250ms">e</span><span style="transition-delay:250ms">s</span><span style="transition-delay:250ms">o</span>
+                    </label>
+                </div>
+
+
+            </div>
+            <div class="col d-flex justify-content-center align-items-center ps-3">
+                <img width="320" height="320" src="https://img.icons8.com/pulsar-gradient/1500/user.png" alt="user" />
+            </div>
+        </div>
+        <div class="row-cols-2 d-flex justify-content-center align-items-center px-5">
+            <button class="button-user mx-2 color-button-ok" @onclick="agregarLicencia">
+                Registrar Licencia
+                <svg class="icon-button-user" viewBox="0 0 24 24" fill="currentColor">
+                    <path fill-rule="evenodd"
+                          d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
+                          clip-rule="evenodd"></path>
+                </svg>
+            </button>
+        </div>
+    </div>
+</div>
+
+@code {
+
+    private LicenciasBusiness licenciasBusiness = new LicenciasBusiness();
+    private string   legajo;
+    private string   DescripcionLicencia=string.Empty;
+    private string tipoLicencia = "Vacaciones";
+    private DateTime _inicioLicencia = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);// Valor inicial    private DateTime _inicioLicencia = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
+    public DateTime IncioLicencia
+    {
+        get { return _inicioLicencia; }
+        set { _inicioLicencia = value; }
+    }
+
+    private DateTime _finLicencia = new DateTime(DateTime.Now.Year, 1, 1);
+    public DateTime FinLicencia
+    {
+        get { return _finLicencia; }
+        set { _finLicencia = value; }
+    }
+
+
+    private  async void agregarLicencia()
+    {
+
+        if(string.IsNullOrEmpty(legajo))
+        {
+            JS.InvokeVoidAsync("alert", "Debe ingresar un legajo");
+            return;
+        }
+        else if (_finLicencia<_inicioLicencia)
+        {
+            JS.InvokeVoidAsync("alert", "La fecha de inicio debe ser anterior a la de fin");
+            return;
+        }else if(FinLicencia==new DateTime(DateTime.Now.Year, 1, 1))
+        {
+            JS.InvokeVoidAsync("alert", "Debe Ingresar una fecha de fin");
+            return;
+        }
+
+
+        Licencia licencia = new Licencia(0,tipoLicencia,int.Parse(legajo),DescripcionLicencia, IncioLicencia, FinLicencia);
+            bool estado = await licenciasBusiness.AddAsync(licencia);
+
+
+        if (true)
+        {
+            JS.InvokeVoidAsync("alert", "Licencia agregada");
+            legajo = string.Empty;
+            DescripcionLicencia = string.Empty;
+            tipoLicencia = "Vacaciones";
+            _inicioLicencia = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);// Valor inicial
+            _finLicencia = new DateTime(DateTime.Now.Year, 1, 1);
+        }
+        else
+        {
+            JS.InvokeVoidAsync("alert", "No se pudo agregar la licencia");
+        }
+
+
+    }
+
+    private void BuscarLegajoPorUsuario()//ya lo tengo el el claim
+    {
+        
+    }
+
+
+
+}

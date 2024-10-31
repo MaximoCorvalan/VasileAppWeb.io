@@ -1,0 +1,179 @@
+﻿@page "/admin/newUser"
+@using System.Data.SqlClient
+@using System.Text
+@using MiVasile.Infrastructure
+@using MimeKit;
+@using MailKit.Net.Smtp;
+
+
+@rendermode InteractiveServer
+
+@attribute [Authorize(Roles = "Admin")]
+@inject IJSRuntime JS
+
+<div class="contenedor-centrado">
+    <div class="container-form">
+        <h1 class="fontSegoe text-center">Alta nuevo usaurio</h1>
+        <div class="row-cols-2 d-flex justify-content-center align-items-center px-5">
+            <div class="col ps-4">
+                <div class="inputLegajo">
+                    <input type="email" required="" @bind="Correo" />
+                    <label>
+                        <span style="transition-delay:0ms">E</span><span style="transition-delay:50ms">m</span><span style="transition-delay:100ms">a</span><span style="transition-delay:150ms">i</span><span style="transition-delay:200ms">l</span>
+                    </label>
+                </div>
+                <div class="inputLegajo">
+                    <input type="number" @bind="Legajo" required="" />
+                    <label>
+                        <span style="transition-delay:0ms">L</span><span style="transition-delay:50ms">e</span><span style="transition-delay:100ms">g</span><span style="transition-delay:150ms">a</span><span style="transition-delay:200ms">j</span><span style="transition-delay:250ms">o</span>
+                    </label>
+                </div>
+                <div class="inputLegajo">
+                    <input type="text" required="" @bind="Nombre_Completo" />
+                    <label>
+                        <span style="transition-delay:0ms">N</span><span style="transition-delay:50ms">o</span><span style="transition-delay:100ms">m</span><span style="transition-delay:150ms">b</span><span style="transition-delay:200ms">r</span><span style="transition-delay:250ms">e</span><span style="transition-delay:300ms"></span><span style="transition-delay:350ms">C</span><span style="transition-delay:400ms">o</span><span style="transition-delay:450ms">m</span><span style="transition-delay:500ms">p</span><span style="transition-delay:550ms">l</span><span style="transition-delay:600ms">e</span><span style="transition-delay:650ms">t</span><span style="transition-delay:700ms">o</span>
+                    </label>
+                </div>
+
+
+            </div>
+            <div class="col d-flex justify-content-center align-items-center ps-3">
+                <img width="320" height="320" src="https://img.icons8.com/pulsar-gradient/1500/user.png" alt="user" />
+            </div>
+        </div>
+        <div class="row-cols-2 d-flex justify-content-center align-items-center px-5">
+            <button class="button-user mx-2 color-button-ok" @onclick="AltaNuevoUsuario">
+                Agregar Usuario
+                <svg class="icon-button-user" viewBox="0 0 24 24" fill="currentColor">
+                    <path fill-rule="evenodd"
+                          d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
+                          clip-rule="evenodd"></path>
+                </svg>
+            </button>
+        </div>
+    </div>
+</div>
+
+
+@code {
+
+    private int? Legajo { get; set; }
+
+    private string Correo { get; set; }
+
+    private string Nombre_Completo { get; set; }
+
+
+    private async Task<bool> AltaNuevoUsuario()
+    {
+     
+        if (!string.IsNullOrEmpty(Correo) && !string.IsNullOrEmpty(Legajo.ToString()) && !string.IsNullOrEmpty(Nombre_Completo))
+        {
+            try
+            {
+                string contrasena = GenerarContraseña();
+                string procedimientoAlmacenado = "SP_ALTA_NUEVO_USUARIO";
+                List<SqlParameter> sqlParameters = new List<SqlParameter>
+                {
+                    new SqlParameter("@CORREO", Correo),
+                    new SqlParameter("@LEGAJO", Legajo),
+                    new SqlParameter("@NOMBRE_COMPLETO", Nombre_Completo),
+                    new SqlParameter("@CLAVE_GENERADA",contrasena)
+                };
+
+              
+              
+                DataAccess.AbrirConexion();
+                await DataAccess.ExecStoredProcedureAsync(procedimientoAlmacenado, sqlParameters);
+
+                await JS.InvokeVoidAsync("alert", $"Usuario creado exitosamente, se envio al correo electronico {Correo} las credenciales del mismo.");
+                await EnviarEmail(contrasena);
+                
+
+                Correo = string.Empty;
+                Legajo = 0;
+                Nombre_Completo = string.Empty;
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+            finally
+            {
+                DataAccess.CerrarConexion();
+            }
+
+        }
+        else
+        {
+            await JS.InvokeVoidAsync("alert", "Todos los campos son obligatorios, intentelo de nuevo...");
+            return false;
+        }
+    }
+
+    private string GenerarContraseña()
+    {
+        const string validChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+        const string numbers = "0123456789";
+        StringBuilder password = new StringBuilder();
+        Random random = new Random();
+
+        // Añadir al menos un número
+        password.Append(numbers[random.Next(numbers.Length)]);
+
+        // Generar el resto de la contraseña aleatoria
+        for (int i = 1; i < 12; i++)
+        {
+            int index = random.Next(validChars.Length);
+            password.Append(validChars[index]);
+        }
+
+        return password.ToString();
+    }
+
+
+    public async Task EnviarEmail(string contrasena) //ACORDATE DE CAMBIAR EL CORREO A LA DE LA EMPRESA
+    {
+        var mensaje = new MimeMessage();
+        mensaje.From.Add(new MailboxAddress("Vasile", "corvalanmaximo@gmail.com"));
+        mensaje.To.Add(new MailboxAddress("Destinatario", Correo));
+        mensaje.Subject = "Credenciales de Usuario";
+        mensaje.Body = new TextPart("html")
+            {
+                Text = $@"
+            <img src='https://i.ibb.co/ZSG0sSH/Logo-Vasile-Con-Letras.png' style='width: 65px; height: 65px;' border='0'>
+            <p>Hola {Nombre_Completo}.</p>
+            <p>Tu usuario ha sido creado exitosamente.</p>
+            <p>Legajo :  {Legajo}</p>
+            <p>Correo : {Correo}</p>
+            <p>Contraseña : {contrasena} </p>
+            <p>Por favor no responda este correo, en caso de algún error, contactese con <a href='mailto:rrhh@vasile.com.ar'>rrhh@vasile.com.ar</a>.</p>"
+            // Ajusta el estilo según sea necesario
+            };
+
+        using (var cliente = new SmtpClient())
+        {
+            try
+            {
+                cliente.CheckCertificateRevocation = false;
+                await cliente.ConnectAsync("smtp.gmail.com", 587, MailKit.Security.SecureSocketOptions.StartTls);
+                await cliente.AuthenticateAsync("corvalanmaximo@gmail.com", "rzic pkvu dsik azeb"); // Usa tu contraseña de aplicación
+                await cliente.SendAsync(mensaje);
+                Console.WriteLine("Correo enviado exitosamente.");
+            }
+            catch (Exception ex)
+            {
+                
+                await JS.InvokeVoidAsync("alert", $"Error al enviar el correo: {ex.Message}");
+            }
+            finally
+            {
+                await cliente.DisconnectAsync(true);
+            }
+        }
+    }
+
+    
+}
+

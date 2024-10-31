@@ -1,0 +1,107 @@
+﻿<NavLink href="/home" style="text-decoration:none">
+    <div class="bg-dark bg-opacity-25 d-flex align-items-center justify-content-center" style="text-decoration:none">
+        <img src="https://i.ibb.co/F3KrZH2/Logo-Vasile-Sin-Sombra.png" alt="Alternate Text" style="width: 50px; height: 50px; filter:drop-shadow(0 0 10px rgba(0,0,0, .8))" />
+        <p class="fw-bolder text-light ms-3 fs-5 pt-3">MI VASILE</p>
+    </div>
+</NavLink>
+
+<div class="nav-scrollable pt-3 ">
+    <nav class="flex-column movile">
+        <div class="nav-item px-3 py-2">
+            <NavLink class="" href="/myReceipts" Match="NavLinkMatch.All">
+                <button class="c-button c-button--gooey">
+                    <i>Tu Recibo </i>
+                    <div class="c-button__blobs">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </button>
+            </NavLink>
+        </div>
+
+        <div class="nav-item px-3 py-2">
+            <NavLink class="" href="\User\Vacation" Match="NavLinkMatch.All">
+                <button class="c-button c-button--gooey">
+                    <i>Vacaciones </i>
+                    <div class="c-button__blobs">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </button>
+            </NavLink>
+        </div>
+
+        <div class="nav-item px-3 py-2">
+            <NavLink class="" href="/user/license" Match="NavLinkMatch.All">
+                <button class="c-button c-button--gooey">
+                    <i>Licencia</i>
+                    <div class="c-button__blobs">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </button>
+            </NavLink>
+        </div>
+
+        <AuthorizeView Roles="Admin">
+            <div class="nav-item px-3 py-2">
+                <NavLink class="" href="/admin/receipt" Match="NavLinkMatch.All">
+                    <button class="c-button c-button--gooey">
+                        <i>Control de Recibos</i>
+                        <div class="c-button__blobs">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </button>
+                </NavLink>
+            </div>
+            <div class="nav-item px-3 py-2">
+                <NavLink class="" href="/admin/newUser" Match="NavLinkMatch.All">
+                    <button class="c-button c-button--gooey">
+                        <i>Nuevo Usuario</i>
+                        <div class="c-button__blobs">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </button>
+                </NavLink>
+            </div>
+
+              <div class="nav-item px-3 py-2">
+                <NavLink class="" href="/admin/registrarLicencia" Match="NavLinkMatch.All">
+                    <button class="c-button c-button--gooey">
+                        <i>Registrar Licencias</i>
+                        <div class="c-button__blobs">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </button>
+                </NavLink>
+            </div>
+
+                
+        </AuthorizeView>
+
+
+
+        <div class="nav-item px-3 position-fixed bottom-0" style="width: 255px;">
+            <NavLink class="" href="https://vasile.com.ar/" Match="NavLinkMatch.All">
+                <button class="c-button c-button--gooey">
+                    <i>Mas informacion</i>
+                    <div class="c-button__blobs">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </button>
+            </NavLink>
+        </div>
+    </nav>
+</div>
+

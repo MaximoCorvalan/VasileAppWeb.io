@@ -1,0 +1,77 @@
+﻿.imagen-animada {
+    position: relative;
+    animation: moverArribaAbajo 2s ease-in-out infinite;
+}
+
+h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+h2 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    font-size: 25px;
+}
+
+@keyframes moverArribaAbajo {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(20px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 600px) {
+    .imagen-animada {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+/* Para pantallas medianas */
+@media (min-width: 601px) and (max-width: 1200px) {
+    .imagen-animada {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+/* Para pantallas grandes */
+@media (min-width: 1201px) {
+    .imagen-animada {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+
+.imagen-gradiente {
+    mask-image: linear-gradient(black 75%, transparent);
+    height: -webkit-fill-available;
+    width: -webkit-fill-available;
+}
+
+
+@media screen and (min-width: 300px) and (max-width: 758px) {
+
+    .fabrica{
+       display:none;
+       background-color:aqua;
+    }
+
+    .text-center{
+        margin-bottom:auto
+    }
+    
+
+
+
+}

@@ -1,0 +1,213 @@
+﻿.modal-user {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%; /* Anchura completa de la pantalla */
+    height: 100vh; /* Altura completa de la pantalla va vh con completo */
+    background-image: url('https://i.ibb.co/HP15C0D/masthead-watter-bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+.human-resources {
+    --bg-color: #DCE9FF;
+    --bg-color-light: #f1f7ff;
+    --text-color-hover: #4C5656;
+    --box-shadow-color: rgba(220, 233, 255, 0.48);
+}
+
+.card-user {
+    width: 400px;
+    height: 500px;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1), 0 15px 25px rgba(0, 0, 0, 0.05); /* Sombras más profundas */
+    transition: all 0.3s ease-out;
+    text-decoration: none;
+}
+
+    .card-user img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 65px;
+        width: 65px;
+    }
+
+    .card-user:hover {
+        transform: translateY(-5px) scale(1.01) translateZ(0);
+        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2), 0 25px 50px rgba(0, 0, 0, 0.15); /* Aumenta la profundidad */
+    }
+
+        .card-user:hover .overlay {
+            transform: scale(4) translateZ(0);
+        }
+
+        .card-user:hover .circle {
+            border-color: var(--bg-color-light);
+            background: var(--bg-color);
+        }
+
+            .card-user:hover .circle:after {
+                background: var(--bg-color-light);
+            }
+
+        .card-user:hover p {
+            color: var(--text-color-hover);
+        }
+
+    .card-user:active {
+        transform: scale(1) translateZ(0);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15), 0 20px 40px rgba(0, 0, 0, 0.1); /* Mantén profundidad al hacer clic */
+    }
+
+    .card-user p {
+        font-size: 23px;
+        font-family: 'Segoe UI';
+        font: bold;
+        color: #4C5656;
+        margin-top: 30px;
+        z-index: 1000;
+        transition: color 0.3s ease-out;
+    }
+
+.circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: #fff;
+    border: 3px solid var(--bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease-out;
+}
+
+    .circle:after {
+        content: "";
+        width: 118px;
+        height: 118px;
+        display: block;
+        position: absolute;
+        background: var(--bg-color);
+        border-radius: 50%;
+        transition: opacity 0.3s ease-out;
+    }
+
+    .circle svg {
+        z-index: 10000;
+        transform: translateZ(0);
+    }
+
+.overlay {
+    width: 118px;
+    position: absolute;
+    height: 118px;
+    border-radius: 50%;
+    background: var(--bg-color);
+    top: 70px;
+    left: 50px;
+    z-index: 0;
+    transition: transform 0.3s ease-out;
+}
+
+
+/* From Uiverse.io by satyamchaudharydev */
+.button-user {
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    padding-block: 0.5rem;
+    padding-inline: 1.25rem;
+    background-color: rgb(0 107 179);
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffff;
+    gap: 10px;
+    font-weight: bold;
+    border: 3px solid #ffffff4d;
+    outline: none;
+    overflow: hidden;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+    transition: all 0.3s ease-in-out;
+}
+
+.button-user:hover {
+    transform: scale(1.05);
+    border-color: #fff9;
+}
+
+    .button-user:hover .icon {
+        transform: translate(4px);
+    }
+
+    .button-user:hover::before {
+        animation: shine 1.5s ease-out infinite;
+    }
+
+.button-user::before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100%;
+    background-image: linear-gradient( 120deg, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0) 70% );
+    top: 0;
+    left: -100px;
+    opacity: 0.6;
+}
+
+@keyframes shine {
+    0% {
+        left: -100px;
+    }
+
+    60% {
+        left: 100%;
+    }
+
+    to {
+        left: 100%;
+    }
+}
+
+@media screen and (min-width: 300px) and (max-width: 758px) {
+
+    .human-resources{
+        margin:0;
+        margin-top:20px;
+    }
+    .card-user {
+        width: 300px;
+        height: 400px;
+        background: #fff;
+        border-radius: 10px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1), 0 15px 25px rgba(0, 0, 0, 0.05); /* Sombras más profundas */
+        transition: all 0.3s ease-out;
+        text-decoration: none;
+    }
+}
+

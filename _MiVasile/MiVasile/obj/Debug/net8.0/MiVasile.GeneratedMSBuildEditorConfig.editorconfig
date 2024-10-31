@@ -1,0 +1,99 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = MiVasile
+build_property.RootNamespace = MiVasile
+build_property.ProjectDir = C:\Users\Programador2\Desktop\Proyectos Nico\_MiVasile\MiVasile\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\Programador2\Desktop\Proyectos Nico\_MiVasile\MiVasile
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/Programador2/Desktop/Proyectos Nico/_MiVasile/MiVasile/Components/App.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xBcHAucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Programador2/Desktop/Proyectos Nico/_MiVasile/MiVasile/Components/Layout/LoginLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTG9naW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Programador2/Desktop/Proyectos Nico/_MiVasile/MiVasile/Components/Pages/Auth/Logout.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBdXRoXExvZ291dC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Programador2/Desktop/Proyectos Nico/_MiVasile/MiVasile/Components/Pages/Error.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xFcnJvci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Programador2/Desktop/Proyectos Nico/_MiVasile/MiVasile/Components/Pages/User/Vacation.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xVc2VyXFZhY2F0aW9uLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Programador2/Desktop/Proyectos Nico/_MiVasile/MiVasile/Components/Routes.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xSb3V0ZXMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Programador2/Desktop/Proyectos Nico/_MiVasile/MiVasile/Components/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xfSW1wb3J0cy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Programador2/Desktop/Proyectos Nico/_MiVasile/MiVasile/Components/Layout/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTWFpbkxheW91dC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-hd2ke0gxzj
+
+[C:/Users/Programador2/Desktop/Proyectos Nico/_MiVasile/MiVasile/Components/Layout/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTmF2TWVudS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-gkd9lcwxx4
+
+[C:/Users/Programador2/Desktop/Proyectos Nico/_MiVasile/MiVasile/Components/MoreComponents/Profile.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xNb3JlQ29tcG9uZW50c1xQcm9maWxlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-gkg1198klq
+
+[C:/Users/Programador2/Desktop/Proyectos Nico/_MiVasile/MiVasile/Components/Pages/Admin/NewUser.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBZG1pblxOZXdVc2VyLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-i61utgmmft
+
+[C:/Users/Programador2/Desktop/Proyectos Nico/_MiVasile/MiVasile/Components/Pages/Admin/ReceiptControl.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBZG1pblxSZWNlaXB0Q29udHJvbC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-j47e4w0zgs
+
+[C:/Users/Programador2/Desktop/Proyectos Nico/_MiVasile/MiVasile/Components/Pages/Admin/RegisterLicense.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBZG1pblxSZWdpc3RlckxpY2Vuc2UucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-e0zepgyd02
+
+[C:/Users/Programador2/Desktop/Proyectos Nico/_MiVasile/MiVasile/Components/Pages/Auth/Login.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBdXRoXExvZ2luLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-fbiqhx6i6a
+
+[C:/Users/Programador2/Desktop/Proyectos Nico/_MiVasile/MiVasile/Components/Pages/Auth/NoAuthorizationPage.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBdXRoXE5vQXV0aG9yaXphdGlvblBhZ2UucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-qbujvqxg12
+
+[C:/Users/Programador2/Desktop/Proyectos Nico/_MiVasile/MiVasile/Components/Pages/Home.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xIb21lLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-et89cmfp8k
+
+[C:/Users/Programador2/Desktop/Proyectos Nico/_MiVasile/MiVasile/Components/Pages/User/License.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xVc2VyXExpY2Vuc2UucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-vdlmtpl2ip
+
+[C:/Users/Programador2/Desktop/Proyectos Nico/_MiVasile/MiVasile/Components/Pages/User/MyProfile.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xVc2VyXE15UHJvZmlsZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-54y20bp2qj
+
+[C:/Users/Programador2/Desktop/Proyectos Nico/_MiVasile/MiVasile/Components/Pages/User/MyReceipts.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xVc2VyXE15UmVjZWlwdHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-4lu3gtkacu
+
+[C:/Users/Programador2/Desktop/Proyectos Nico/_MiVasile/MiVasile/Components/Pages/User/PersonalData.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xVc2VyXFBlcnNvbmFsRGF0YS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-05ouzlna8w

@@ -1,0 +1,80 @@
+body[b-vdlmtpl2ip] {
+    overflow: hidden;
+}
+
+.conteiner[b-vdlmtpl2ip] {
+    margin-top: 10%
+}
+
+.div-vacation[b-vdlmtpl2ip] {
+    margin: auto;
+    text-align: center;
+    width: 300px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    width: 100%;
+}
+
+.olvacation[b-vdlmtpl2ip] {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    margin: 0;
+    padding: 0;
+    margin-top: 70px
+}
+
+li[b-vdlmtpl2ip] {
+    font-size: 2ch;
+}
+
+h2[b-vdlmtpl2ip] {
+    margin-top: 10px;
+    display: block;
+    padding: 0;
+    text-align: center;
+}
+
+
+
+
+.day-name[b-vdlmtpl2ip] {
+    background: #0573C4;
+    color: white;
+    font-weight: bold;
+    font-size: 12px;
+    margin-bottom: 2px;
+    padding: 4px;
+    text-align: center;
+}
+
+.button[b-vdlmtpl2ip], .btnRight[b-vdlmtpl2ip] {
+    padding: 7px;
+    border: none;
+    border-radius: 20px;
+    text-align: center;
+    background-color: #0573C4;
+    color: white;
+    font-size: 30px;
+}
+
+.button[b-vdlmtpl2ip] {
+    margin-left: 15%;
+}
+
+.btnRight[b-vdlmtpl2ip] {
+    margin-right: 15%;
+}
+
+    .button:hover[b-vdlmtpl2ip], .btnRight:hover[b-vdlmtpl2ip] {
+        border-radius: 18px;
+        background-color: #87ddf5;
+        color: white;
+        padding: 7px;
+    }
+
+
+.aux[b-vdlmtpl2ip] {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between
+}

@@ -1,0 +1,25 @@
+﻿.card {
+    width: 26vw;
+   
+   
+}
+
+.contenedor-centrado-login {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+@media screen  (max-width: 900px) {
+    .card {
+
+        width:100vw;
+
+    }
+
+
+
+}

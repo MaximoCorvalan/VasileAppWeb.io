@@ -1,0 +1,13 @@
+﻿@page "/auth/logout"
+@inject IHttpContextAccessor HttpContextAccessor
+@inject NavigationManager navigationManager
+
+<PageTitle>Logout</PageTitle>
+@code {
+
+    protected override async Task OnInitializedAsync()
+    {
+        await HttpContextAccessor.HttpContext!.SignOutAsync(Constantes.AuthScheme);
+        navigationManager.NavigateTo("/", forceLoad: true);
+    }
+}

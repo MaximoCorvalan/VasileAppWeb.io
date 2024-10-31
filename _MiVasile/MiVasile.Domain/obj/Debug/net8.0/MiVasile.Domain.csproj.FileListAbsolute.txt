@@ -1,0 +1,24 @@
+C:\Users\Programador2\source\repos\MiVasile.Domain\bin\Debug\net8.0\MiVasile.Domain.deps.json
+C:\Users\Programador2\source\repos\MiVasile.Domain\bin\Debug\net8.0\MiVasile.Domain.dll
+C:\Users\Programador2\source\repos\MiVasile.Domain\bin\Debug\net8.0\MiVasile.Domain.pdb
+C:\Users\Programador2\source\repos\MiVasile.Domain\obj\Debug\net8.0\MiVasile.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Programador2\source\repos\MiVasile.Domain\obj\Debug\net8.0\MiVasile.Domain.AssemblyInfoInputs.cache
+C:\Users\Programador2\source\repos\MiVasile.Domain\obj\Debug\net8.0\MiVasile.Domain.AssemblyInfo.cs
+C:\Users\Programador2\source\repos\MiVasile.Domain\obj\Debug\net8.0\MiVasile.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Programador2\source\repos\MiVasile.Domain\obj\Debug\net8.0\MiVasile.Domain.dll
+C:\Users\Programador2\source\repos\MiVasile.Domain\obj\Debug\net8.0\refint\MiVasile.Domain.dll
+C:\Users\Programador2\source\repos\MiVasile.Domain\obj\Debug\net8.0\MiVasile.Domain.pdb
+C:\Users\Programador2\source\repos\MiVasile.Domain\obj\Debug\net8.0\ref\MiVasile.Domain.dll
+C:\Users\Programador2\source\repos\MiVasile.Domain\obj\Debug\net8.0\MiVasile.Domain.csproj.AssemblyReference.cache
+C:\Users\Programador2\Desktop\Proyectos Nico\_MiVasile\MiVasile.Domain\bin\Debug\net8.0\MiVasile.Domain.deps.json
+C:\Users\Programador2\Desktop\Proyectos Nico\_MiVasile\MiVasile.Domain\bin\Debug\net8.0\MiVasile.Domain.dll
+C:\Users\Programador2\Desktop\Proyectos Nico\_MiVasile\MiVasile.Domain\bin\Debug\net8.0\MiVasile.Domain.pdb
+C:\Users\Programador2\Desktop\Proyectos Nico\_MiVasile\MiVasile.Domain\obj\Debug\net8.0\MiVasile.Domain.csproj.AssemblyReference.cache
+C:\Users\Programador2\Desktop\Proyectos Nico\_MiVasile\MiVasile.Domain\obj\Debug\net8.0\MiVasile.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Programador2\Desktop\Proyectos Nico\_MiVasile\MiVasile.Domain\obj\Debug\net8.0\MiVasile.Domain.AssemblyInfoInputs.cache
+C:\Users\Programador2\Desktop\Proyectos Nico\_MiVasile\MiVasile.Domain\obj\Debug\net8.0\MiVasile.Domain.AssemblyInfo.cs
+C:\Users\Programador2\Desktop\Proyectos Nico\_MiVasile\MiVasile.Domain\obj\Debug\net8.0\MiVasile.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Programador2\Desktop\Proyectos Nico\_MiVasile\MiVasile.Domain\obj\Debug\net8.0\MiVasile.Domain.dll
+C:\Users\Programador2\Desktop\Proyectos Nico\_MiVasile\MiVasile.Domain\obj\Debug\net8.0\refint\MiVasile.Domain.dll
+C:\Users\Programador2\Desktop\Proyectos Nico\_MiVasile\MiVasile.Domain\obj\Debug\net8.0\MiVasile.Domain.pdb
+C:\Users\Programador2\Desktop\Proyectos Nico\_MiVasile\MiVasile.Domain\obj\Debug\net8.0\ref\MiVasile.Domain.dll

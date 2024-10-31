@@ -1,0 +1,194 @@
+﻿@page "/admin/receipt"
+@rendermode InteractiveServer
+
+@inject NavigationManager navigationManager
+@inject HttpClient httpClient
+@inject IJSRuntime JS
+
+@attribute [Authorize(Roles = "Admin")]
+
+<div class="contenedor-centrado">
+    <div class="container-form animate__fadeIn">
+
+        <h1 class="text-center fontSegoe">Recibos de Sueldo</h1>
+        <div class="d-flex justify-content-around align-items-center">
+
+            <div class="inputLegajo">
+                <input type="number" @bind="Documento.Legajo_Empleado" required="">
+                <label>
+                    <span style="transition-delay:0ms">L</span><span style="transition-delay:50ms">e</span><span style="transition-delay:100ms">g</span><span style="transition-delay:150ms">a</span><span style="transition-delay:200ms">j</span><span style="transition-delay:250ms">o</span>
+                </label>
+            </div>
+
+            <div class="menu">
+                <div class="item">
+                    <a class="link">
+                        <span>@SelectedItem</span>
+                        <svg viewBox="0 0 360 360" xml:space="preserve">
+                        <g id="SVGRepo_iconCarrier">
+                        <path id="XMLID_225_"
+                              d="M325.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001l-139.39,139.393L25.607,79.393 c-5.857-5.857-15.355-5.858-21.213,0.001c-5.858,5.858-5.858,15.355,0,21.213l150.004,150c2.813,2.813,6.628,4.393,10.606,4.393 s7.794-1.581,10.606-4.394l149.996-150C331.465,94.749,331.465,85.251,325.607,79.393z"></path>
+        </g>
+        </svg>
+                    </a>
+                    <div class="submenu">
+                        <div class="submenu-item">
+                            <a @onclick='() => SelectedItem = "1ra Quincena"' class="submenu-link"> 1ra Quincena </a>
+                        </div>
+                        <div class="submenu-item">
+                            <a @onclick='() => SelectedItem = "2da Quincena"' class="submenu-link"> 2da Quincena </a>
+                        </div>
+                        <div class="submenu-item">
+                            <a @onclick='() => SelectedItem = "Mensual"' class="submenu-link"> Mensual </a>
+                        </div>
+                        <div class="submenu-item">
+                            <a @onclick='() => SelectedItem = "Otros"' class="submenu-link"> Otros </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-center">
+            <label class="custum-file-upload" for="file">
+                <div class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="" viewBox="0 0 24 24"><g stroke-width="0" id="SVGRepo_bgCarrier"></g><g stroke-linejoin="round" stroke-linecap="round" id="SVGRepo_tracerCarrier"></g><g id="SVGRepo_iconCarrier"> <path fill="" d="M10 1C9.73478 1 9.48043 1.10536 9.29289 1.29289L3.29289 7.29289C3.10536 7.48043 3 7.73478 3 8V20C3 21.6569 4.34315 23 6 23H7C7.55228 23 8 22.5523 8 22C8 21.4477 7.55228 21 7 21H6C5.44772 21 5 20.5523 5 20V9H10C10.5523 9 11 8.55228 11 8V3H18C18.5523 3 19 3.44772 19 4V9C19 9.55228 19.4477 10 20 10C20.5523 10 21 9.55228 21 9V4C21 2.34315 19.6569 1 18 1H10ZM9 7H6.41421L9 4.41421V7ZM14 15.5C14 14.1193 15.1193 13 16.5 13C17.8807 13 19 14.1193 19 15.5V16V17H20C21.1046 17 22 17.8954 22 19C22 20.1046 21.1046 21 20 21H13C11.8954 21 11 20.1046 11 19C11 17.8954 11.8954 17 13 17H14V16V15.5ZM16.5 11C14.142 11 12.2076 12.8136 12.0156 15.122C10.2825 15.5606 9 17.1305 9 19C9 21.2091 10.7909 23 13 23H20C22.2091 23 24 21.2091 24 19C24 17.1305 22.7175 15.5606 20.9844 15.122C20.7924 12.8136 18.858 11 16.5 11Z" clip-rule="evenodd" fill-rule="evenodd"></path> </g></svg>
+                </div>
+                <div class="text">
+                    <span>Click para cargar el archivo .pdf</span>
+                </div>
+                @if (!string.IsNullOrEmpty(browserFile?.Name))
+                {
+                    <div class="text">
+                        <span>Archivo seleccionado: @browserFile?.Name</span>
+                    </div>
+                }
+
+                <InputFile id="file" style="display:none" OnChange="OnInputFileChange" />
+            </label>
+        </div>
+        <div class="d-flex justify-content-around align-items-center mt-3">
+            <button class="button-user mx-2 color-button-ok" @onclick="SubirArchivo">
+                Adjuntar recibo
+                <svg class="icon-button-user" viewBox="0 0 24 24" fill="currentColor">
+                    <path fill-rule="evenodd"
+                          d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
+                          clip-rule="evenodd"></path>
+                </svg>
+            </button>
+            <button class="button-user mx-2 color-buton-no" @onclick='() => navigationManager.NavigateTo("/user/personaldata")'>
+                Cancelar operacion
+                <svg class="icon-button-user" viewBox="0 0 24 24" fill="currentColor">
+                    <path fill-rule="evenodd"
+                          d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
+                          clip-rule="evenodd"></path>
+                </svg>
+            </button>
+        </div>
+
+        @*  <label for="fileInput">Seleccionar Archivo:</label>
+        <InputFile id="fileInput" OnChange="OnInputFileChange" />
+        <br />
+        <label for="descriptionInput">Descripción:</label>
+        <input id="descriptionInput" @bind-value="Documento.Descripcion" type="text" />
+        <br />
+        <button @onclick="SubirArchivo">Subir</button> *@
+    </div>
+</div>
+
+
+@code {
+    public IBrowserFile browserFile { get; set; }
+    public Documento Documento { get; set; } = new();
+    public string SelectedItem { get; set; } = "Tipo facturación";
+
+    private async Task OnInputFileChange(InputFileChangeEventArgs e)
+    {
+        browserFile = e.File;
+    }
+
+
+    private async Task<bool> SubirArchivo()
+    {
+        try
+        {
+            if(string.IsNullOrEmpty(Documento.Legajo_Empleado.ToString()))
+            {
+               await JS.InvokeVoidAsync("alert", "Debe ingresar un legajo");
+                return false;
+            }
+
+            if (browserFile == null)
+            {
+                await JS.InvokeVoidAsync("alert", "Debe seleccionar un archivo");
+                return false;
+            }
+
+            var form = new MultipartFormDataContent();
+            var archivoStream = browserFile.OpenReadStream();
+            var streamContent = new StreamContent(archivoStream);
+            streamContent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue(browserFile.ContentType);
+
+            Documento.Descripcion = "Recibo de Sueldo - " + SelectedItem + " - " + GetMesActual() + " " + DateTime.Now.Year;
+
+            form.Add(streamContent, "Archivo", browserFile.Name);
+            form.Add(new StringContent(Documento.Descripcion), "Descripcion");
+            form.Add(new StringContent(Documento.Legajo_Empleado.ToString()), "Legajo_Empleado");
+
+
+            var response = await httpClient.PostAsync("api/Documento/Upload", form);
+
+            if (response.IsSuccessStatusCode)
+            {
+                var message = await response.Content.ReadAsStringAsync();
+                await JS.InvokeVoidAsync("alert", message);
+                return true;
+            }
+            else
+            {
+                var errorMessage = await response.Content.ReadAsStringAsync();
+                await JS.InvokeVoidAsync("alert", $"Error al subir archivo: {errorMessage}");
+                return false;
+            }
+        }
+        catch (Exception ex)
+        {
+            await JS.InvokeVoidAsync("alert", $"Ocurrió un error: {ex.Message}");
+            return false;
+        }
+    }
+
+
+    private string GetMesActual()
+    {
+        switch (DateTime.Now.Month)
+        {
+            case 1:
+                return "Enero";
+            case 2:
+                return "Febrero";
+            case 3:
+                return "Marzo";
+            case 4:
+                return "Abril";
+            case 5:
+                return "Mayo";
+            case 6:
+                return "Junio";
+            case 7:
+                return "Julio";
+            case 8:
+                return "Agosto";
+            case 9:
+                return "Septiembre";
+            case 10:
+                return "Octubre";
+            case 11:
+                return "Noviembre";
+            case 12:
+                return "Diciembre";             
+            default:
+                return "";
+        }
+    }
+}

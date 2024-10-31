@@ -1,0 +1,30 @@
+C:\Users\Programador2\source\repos\MiVasile.Infrastructure\bin\Debug\net8.0\MiVasile.Infrastructure.deps.json
+C:\Users\Programador2\source\repos\MiVasile.Infrastructure\bin\Debug\net8.0\MiVasile.Infrastructure.dll
+C:\Users\Programador2\source\repos\MiVasile.Infrastructure\bin\Debug\net8.0\MiVasile.Infrastructure.pdb
+C:\Users\Programador2\source\repos\MiVasile.Infrastructure\bin\Debug\net8.0\MiVasile.Domain.dll
+C:\Users\Programador2\source\repos\MiVasile.Infrastructure\bin\Debug\net8.0\MiVasile.Domain.pdb
+C:\Users\Programador2\source\repos\MiVasile.Infrastructure\obj\Debug\net8.0\MiVasile.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\Programador2\source\repos\MiVasile.Infrastructure\obj\Debug\net8.0\MiVasile.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Programador2\source\repos\MiVasile.Infrastructure\obj\Debug\net8.0\MiVasile.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\Programador2\source\repos\MiVasile.Infrastructure\obj\Debug\net8.0\MiVasile.Infrastructure.AssemblyInfo.cs
+C:\Users\Programador2\source\repos\MiVasile.Infrastructure\obj\Debug\net8.0\MiVasile.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\Programador2\source\repos\MiVasile.Infrastructure\obj\Debug\net8.0\MiVasile.DDFF5451.Up2Date
+C:\Users\Programador2\source\repos\MiVasile.Infrastructure\obj\Debug\net8.0\MiVasile.Infrastructure.dll
+C:\Users\Programador2\source\repos\MiVasile.Infrastructure\obj\Debug\net8.0\refint\MiVasile.Infrastructure.dll
+C:\Users\Programador2\source\repos\MiVasile.Infrastructure\obj\Debug\net8.0\MiVasile.Infrastructure.pdb
+C:\Users\Programador2\source\repos\MiVasile.Infrastructure\obj\Debug\net8.0\ref\MiVasile.Infrastructure.dll
+C:\Users\Programador2\Desktop\Proyectos Nico\_MiVasile\MiVasile.Infrastructure\bin\Debug\net8.0\MiVasile.Infrastructure.deps.json
+C:\Users\Programador2\Desktop\Proyectos Nico\_MiVasile\MiVasile.Infrastructure\bin\Debug\net8.0\MiVasile.Infrastructure.dll
+C:\Users\Programador2\Desktop\Proyectos Nico\_MiVasile\MiVasile.Infrastructure\bin\Debug\net8.0\MiVasile.Infrastructure.pdb
+C:\Users\Programador2\Desktop\Proyectos Nico\_MiVasile\MiVasile.Infrastructure\bin\Debug\net8.0\MiVasile.Domain.dll
+C:\Users\Programador2\Desktop\Proyectos Nico\_MiVasile\MiVasile.Infrastructure\bin\Debug\net8.0\MiVasile.Domain.pdb
+C:\Users\Programador2\Desktop\Proyectos Nico\_MiVasile\MiVasile.Infrastructure\obj\Debug\net8.0\MiVasile.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\Programador2\Desktop\Proyectos Nico\_MiVasile\MiVasile.Infrastructure\obj\Debug\net8.0\MiVasile.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Programador2\Desktop\Proyectos Nico\_MiVasile\MiVasile.Infrastructure\obj\Debug\net8.0\MiVasile.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\Programador2\Desktop\Proyectos Nico\_MiVasile\MiVasile.Infrastructure\obj\Debug\net8.0\MiVasile.Infrastructure.AssemblyInfo.cs
+C:\Users\Programador2\Desktop\Proyectos Nico\_MiVasile\MiVasile.Infrastructure\obj\Debug\net8.0\MiVasile.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\Programador2\Desktop\Proyectos Nico\_MiVasile\MiVasile.Infrastructure\obj\Debug\net8.0\MiVasile.DDFF5451.Up2Date
+C:\Users\Programador2\Desktop\Proyectos Nico\_MiVasile\MiVasile.Infrastructure\obj\Debug\net8.0\MiVasile.Infrastructure.dll
+C:\Users\Programador2\Desktop\Proyectos Nico\_MiVasile\MiVasile.Infrastructure\obj\Debug\net8.0\refint\MiVasile.Infrastructure.dll
+C:\Users\Programador2\Desktop\Proyectos Nico\_MiVasile\MiVasile.Infrastructure\obj\Debug\net8.0\MiVasile.Infrastructure.pdb
+C:\Users\Programador2\Desktop\Proyectos Nico\_MiVasile\MiVasile.Infrastructure\obj\Debug\net8.0\ref\MiVasile.Infrastructure.dll

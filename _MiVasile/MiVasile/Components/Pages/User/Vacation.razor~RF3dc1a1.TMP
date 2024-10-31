@@ -1,0 +1,278 @@
+﻿@rendermode InteractiveServer
+@page "/user/vacation"
+@inject IJSRuntime JS
+@inject IHttpContextAccessor HttpContextAccessor
+
+@using System.Globalization
+
+<style>
+
+    body{
+        overflow: hidden;
+    }
+
+
+    .conteiner{
+  
+       margin-top:10%
+    }
+
+    .div-vacation {
+           margin: auto;
+        text-align: center;
+        width: 300px;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        width: 100%;
+    }
+
+    .olvacation {
+        list-style: none;
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        margin: 0;
+        padding: 0;
+        margin-top:70px
+    }
+
+    li {
+        font-size: 2ch;
+    }
+
+    h2 {
+        margin-top: 10px;
+        display: block;
+        padding: 0;
+        text-align:center;
+    }
+
+
+    .day-name {
+        background: #0573C4;
+        color: white;
+        font-weight: bold;
+        font-size: 12px;
+        margin-bottom: 2px;
+        padding: 4px;
+        text-align: center;
+    }
+.button, .btnRight {
+    padding: 5px;
+    border: none;
+    border-radius: 15px;
+    text-align: center;
+    background-color: #0573C4;
+    color: white;
+    font-size: 30px;
+}
+
+.button {
+    margin-left: 15%;
+}
+
+.btnRight {
+    margin-right: 15%;
+}
+
+.button:hover, .btnRight:hover {
+    border-radius: 15px;
+    background-color: #87ddf5;
+    color: white;
+      padding: 5px;
+}
+
+
+ .aux{
+     display:flex;
+     flex-direction:row;
+justify-content:space-between
+ }
+
+    .olvacation {
+        list-style: none;
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        margin: 0;
+        padding: 0;
+        margin-top: 70px;
+    }
+</style>
+
+<h1>Vacaciones</h1>
+
+@if (poseeVacacionesVigente())
+{
+    @foreach (var item in Listlicencia)
+    {
+        <h4>Sus vacaciones   comienzan el @item._fechaIngreso.ToString("dd/MM/yyyy") hasta @item._fechaRegreso.ToString("dd/MM/yyyy") </h4>
+
+    }
+
+
+
+    <div class="conteiner">
+        <div class="aux">
+            <button @onclick="ShowPreviousMonth" class="button">&lt;</button>
+            <h2>
+                @actualYear @currentMonthInfo.MonthName
+            </h2>
+            <button class="btnRight" @onclick="ShowNextMonth">&gt;</button>
+
+        </div>
+        <div class="div-vacation">
+            <ol class="olvacation">
+                @foreach (var dayName in weekDays)
+                {
+                    <li class="day-name">@dayName</li>
+                }
+
+
+
+                @for (int day = 1; day <= currentMonthInfo.DaysOfMonth; day++)
+                {
+
+                    if (IsValidDate(actualYear, currentMonthInfo.mInt, day))
+                    {
+                        DateTime currentDate = new DateTime(actualYear, currentMonthInfo.mInt, day);
+                        bool isHighlighted = Listlicencia.Any(item => currentDate >= item._fechaIngreso && currentDate <= item._fechaRegreso);
+
+                        @if (isHighlighted)
+                        {
+                            <li class="day" style="background-color:#0f8112;color:white">
+                                @day
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="day">
+                                @day
+                            </li>
+
+
+                        }
+
+
+                    }
+
+
+                }
+            </ol>
+
+        </div>
+
+    </div>
+}
+else
+{
+    <h3>No posee licencias vigentes</h3>
+}
+
+
+
+
+@code {
+
+    private bool IsValidDate(int year, int month, int day)
+    {
+        return day > 0 && day <= DateTime.DaysInMonth(year, month);
+    }
+
+
+    private LicenciasBusiness LicenciasBusiness = new LicenciasBusiness();
+    private List<Licencia> Listlicencia = new List<Licencia>();
+    // Define un tamaño específico
+
+    private int actualYear = DateTime.Today.Year;
+    private List<MonthInfo> months = new List<MonthInfo>();
+    private string[] weekDays;
+    private int currentMonthIndex = DateTime.Now.Month - 1;
+    private string legajo;
+
+    protected override async Task OnInitializedAsync()
+    {
+        ObtenerCalendario();
+        legajo = @HttpContextAccessor.HttpContext.User.Claims.FirstOrDefault(c => c.Type == "leg")?.Value;
+
+        Listlicencia = await LicenciasBusiness.GetAllAsyncLicencias(legajo,1);
+        
+    }
+
+
+    #region calendario
+
+
+    private int firstDayOfWeekIndex;
+
+    private void ShowNextMonth()
+    {
+        if (currentMonthIndex == 11)
+        {
+            actualYear++;
+        }
+        currentMonthIndex = (currentMonthIndex + 1) % 12;
+        UpdateFirstDayOfWeekIndex();
+        StateHasChanged();
+
+    }
+
+
+    private void ShowPreviousMonth()
+    {
+        if (currentMonthIndex == 0)
+        {
+            actualYear--;
+        }
+        currentMonthIndex = (currentMonthIndex - 1 + 12) % 12;
+        UpdateFirstDayOfWeekIndex();
+        StateHasChanged();
+    }
+
+    private void ObtenerCalendario() // calendario mal configurado
+    {
+        var cultureInfo = new CultureInfo("es");
+        weekDays = Enumerable.Range(0, 7)
+            .Select(dayIndex => cultureInfo.DateTimeFormat.AbbreviatedDayNames[dayIndex])
+            .ToArray();
+
+        for (int monthIndex = 0; monthIndex < 12; monthIndex++)
+        {
+            months.Add(new MonthInfo
+                {
+                    mInt = monthIndex + 1,
+                    MonthName = cultureInfo.DateTimeFormat.GetMonthName(monthIndex + 1),
+                    DaysOfMonth = DateTime.DaysInMonth(actualYear, monthIndex + 1)
+                });
+        }
+
+        UpdateFirstDayOfWeekIndex();
+    }
+
+    private void UpdateFirstDayOfWeekIndex()
+    {
+        firstDayOfWeekIndex = (int)new DateTime(actualYear, currentMonthInfo.mInt, 1).DayOfWeek;
+    }
+
+
+    private MonthInfo currentMonthInfo => months[currentMonthIndex];
+
+
+
+    private class MonthInfo
+    {
+        public int mInt { get; set; }
+        public string MonthName { get; set; }
+        public int DaysOfMonth { get; set; }
+    }
+
+    #endregion
+
+
+    public bool poseeVacacionesVigente() //VERIFICAR SI EL EMPLEADO POSEE UNA LICENCIA VIGENTE
+    {
+
+        if (Listlicencia.Count > 0)
+        {
+            return true;
+        }
+        return false;
+    }
+}
