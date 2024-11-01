@@ -17,7 +17,7 @@ namespace MiVasile.Infrastructure
         public static SqlConnection Connection { get; set; }
         static DataAccess()
         {
-            ConnectionString = "Data Source= 192.168.1.145; Initial Catalog= MiVasileAppWeb; User= sa; Password= Vasile123";
+            ConnectionString = "Data Source= 200.59.11.53; Initial Catalog= MiVasileAppWeb; User= sa; Password= Vasile123";
             Connection = new SqlConnection(ConnectionString);
         }
 

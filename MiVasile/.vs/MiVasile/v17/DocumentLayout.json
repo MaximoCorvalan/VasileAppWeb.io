@@ -3,6 +3,9 @@
   "WorkspaceRootPath": "C:\\Users\\Programador2\\Desktop\\VasileAppWeb.io\\MiVasile\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A9B79D34-6E29-4295-B103-6F2940690623}|..\\MiVasile.Infrastructure\\MiVasile.Infrastructure.csproj|c:\\users\\programador2\\desktop\\vasileappweb.io\\mivasile.infrastructure\\dataaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Programador2\\Desktop\\Proyectos Nico\\_MiVasile\\MiVasile.Infrastructure\\Business\\RolesXUsuario_Business.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -34,11 +37,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
+              "Title": "DataAccess.cs",
+              "DocumentMoniker": "C:\\Users\\Programador2\\Desktop\\VasileAppWeb.io\\MiVasile.Infrastructure\\DataAccess.cs",
+              "RelativeDocumentMoniker": "..\\MiVasile.Infrastructure\\DataAccess.cs",
+              "ToolTip": "C:\\Users\\Programador2\\Desktop\\VasileAppWeb.io\\MiVasile.Infrastructure\\DataAccess.cs",
+              "RelativeToolTip": "..\\MiVasile.Infrastructure\\DataAccess.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABkAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-01T14:12:50.845Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Home.razor",
               "DocumentMoniker": "C:\\Users\\Programador2\\Desktop\\VasileAppWeb.io\\MiVasile\\Components\\Pages\\Home.razor",
               "RelativeDocumentMoniker": "Components\\Pages\\Home.razor",
@@ -50,7 +66,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "LicenciasBusiness.cs",
               "DocumentMoniker": "C:\\Users\\Programador2\\Desktop\\Proyectos Nico\\_MiVasile\\MiVasile.Infrastructure\\Business\\LicenciasBusiness.cs",
               "RelativeDocumentMoniker": "..\\..\\Proyectos Nico\\_MiVasile\\MiVasile.Infrastructure\\Business\\LicenciasBusiness.cs",
@@ -62,7 +78,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "DataAccess.cs",
               "DocumentMoniker": "C:\\Users\\Programador2\\Desktop\\Proyectos Nico\\_MiVasile\\MiVasile.Infrastructure\\DataAccess.cs",
               "RelativeDocumentMoniker": "..\\..\\Proyectos Nico\\_MiVasile\\MiVasile.Infrastructure\\DataAccess.cs",
@@ -74,7 +90,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Programador2\\Desktop\\VasileAppWeb.io\\MiVasile\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -86,7 +102,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "Usuarios_Business.cs",
               "DocumentMoniker": "C:\\Users\\Programador2\\Desktop\\Proyectos Nico\\_MiVasile\\MiVasile.Infrastructure\\Business\\Usuarios_Business.cs",
               "RelativeDocumentMoniker": "..\\..\\Proyectos Nico\\_MiVasile\\MiVasile.Infrastructure\\Business\\Usuarios_Business.cs",
@@ -98,7 +114,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "RolesXUsuario_Business.cs",
               "DocumentMoniker": "C:\\Users\\Programador2\\Desktop\\Proyectos Nico\\_MiVasile\\MiVasile.Infrastructure\\Business\\RolesXUsuario_Business.cs",
               "RelativeDocumentMoniker": "..\\..\\Proyectos Nico\\_MiVasile\\MiVasile.Infrastructure\\Business\\RolesXUsuario_Business.cs",
@@ -111,7 +127,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "License.razor",
               "DocumentMoniker": "C:\\Users\\Programador2\\Desktop\\VasileAppWeb.io\\MiVasile\\Components\\Pages\\User\\License.razor",
               "RelativeDocumentMoniker": "Components\\Pages\\User\\License.razor",
