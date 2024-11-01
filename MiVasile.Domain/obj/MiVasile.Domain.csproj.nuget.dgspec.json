@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Programador2\\Desktop\\Proyectos Nico\\_MiVasile\\MiVasile.Domain\\MiVasile.Domain.csproj": {}
+    "C:\\Users\\Programador2\\Desktop\\VasileAppWeb.io\\MiVasile.Domain\\MiVasile.Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Programador2\\Desktop\\Proyectos Nico\\_MiVasile\\MiVasile.Domain\\MiVasile.Domain.csproj": {
+    "C:\\Users\\Programador2\\Desktop\\VasileAppWeb.io\\MiVasile.Domain\\MiVasile.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Programador2\\Desktop\\Proyectos Nico\\_MiVasile\\MiVasile.Domain\\MiVasile.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\Programador2\\Desktop\\VasileAppWeb.io\\MiVasile.Domain\\MiVasile.Domain.csproj",
         "projectName": "MiVasile.Domain",
-        "projectPath": "C:\\Users\\Programador2\\Desktop\\Proyectos Nico\\_MiVasile\\MiVasile.Domain\\MiVasile.Domain.csproj",
+        "projectPath": "C:\\Users\\Programador2\\Desktop\\VasileAppWeb.io\\MiVasile.Domain\\MiVasile.Domain.csproj",
         "packagesPath": "C:\\Users\\Programador2\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Programador2\\Desktop\\Proyectos Nico\\_MiVasile\\MiVasile.Domain\\obj\\",
+        "outputPath": "C:\\Users\\Programador2\\Desktop\\VasileAppWeb.io\\MiVasile.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -22,7 +22,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net8.0"
+          "net7.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -30,8 +30,8 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
+          "net7.0": {
+            "targetAlias": "net7.0",
             "projectReferences": {}
           }
         },
@@ -47,8 +47,8 @@
         }
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
+        "net7.0": {
+          "targetAlias": "net7.0",
           "dependencies": {
             "Microsoft.AspNetCore.Components.Web": {
               "target": "Package",
@@ -75,7 +75,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }
