@@ -23,7 +23,7 @@ FROM build AS publish
 RUN dotnet publish MiVasile/MiVasile.csproj -c Release -o out
 
 # Crea la imagen final
-FROM mcr.microsoft.com/dotnet/aspnet:7.0
+FROM mcr.microsoft.com/dotnet/aspnet:8.0
 WORKDIR /app
 COPY --from=publish /app/out ./
 
