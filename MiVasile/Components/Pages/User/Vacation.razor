@@ -9,15 +9,18 @@
     body {
         overflow: hidden;
     }
+
     .conteiner {
         margin-top: 10%;
     }
+
     .div-vacation {
         margin: auto;
         text-align: center;
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         width: 100%;
     }
+
     .olvacation {
         list-style: none;
         display: grid;
@@ -26,13 +29,16 @@
         padding: 0;
         margin-top: 70px;
     }
+
     li {
         font-size: 2ch;
     }
+
     h2 {
         margin-top: 10px;
         text-align: center;
     }
+
     .day-name {
         background: #0573C4;
         color: white;
@@ -42,6 +48,7 @@
         padding: 4px;
         text-align: center;
     }
+
     .button, .btnRight {
         padding: 5px;
         border: none;
@@ -50,13 +57,25 @@
         color: white;
         font-size: 30px;
     }
-    .button:hover, .btnRight:hover {
-        background-color: #87ddf5;
-    }
+
+        .button:hover, .btnRight:hover {
+            background-color: #87ddf5;
+        }
+
     .aux {
         display: flex;
-        justify-content: space-between;
+       
     }
+
+
+
+
+    
+    
+
+
+
+}
 </style>
 
 <h1>Vacaciones</h1>
@@ -65,15 +84,16 @@
 {
     @foreach (var item in Listlicencia)
     {
-        <h4>Sus vacaciones comienzan el @item._fechaIngreso.ToString("dd/MM/yyyy") hasta @item._fechaRegreso.ToString("dd/MM/yyyy")</h4>
+        <h4>Usted posee vacaciones  @item._fechaIngreso.ToString("dd/MM/yyyy") hasta @item._fechaRegreso.ToString("dd/MM/yyyy")</h4>
     }
 
+
     <div class="conteiner">
-        <div class="aux">
-            <button @onclick="ShowPreviousMonth" class="button">&lt;</button>
-            <h2>@actualYear @currentMonthInfo.MonthName</h2>
-            <button class="btnRight" @onclick="ShowNextMonth">&gt;</button>
-        </div>
+    <div class="aux" style="justify-content: space-around">
+        <button @onclick="ShowPreviousMonth" class="button">&lt;</button>
+        <h2>@actualYear @currentMonthInfo.MonthName</h2>
+        <button class="btnRight" @onclick="ShowNextMonth">&gt;</button>
+    </div>
         <div class="div-vacation">
             <ol class="olvacation">
                 @foreach (var dayName in weekDays)
@@ -92,11 +112,11 @@
                 {
                     @if (IsValidDate(actualYear, currentMonthInfo.mInt, day))
                     {
-                        
-                    DateTime currentDate = new DateTime(actualYear, currentMonthInfo.mInt, day);
-                    bool isHighlighted = Listlicencia.Any(item => currentDate >= item._fechaIngreso && currentDate <= item._fechaRegreso);
 
-                    <li class="day" style="@(isHighlighted ? "background-color:#0f8112;color:white" : "")">@day</li>
+                        DateTime currentDate = new DateTime(actualYear, currentMonthInfo.mInt, day);
+                        bool isHighlighted = Listlicencia.Any(item => currentDate >= item._fechaIngreso && currentDate <= item._fechaRegreso);
+
+                        <li class="day" style="@(isHighlighted ? "background-color:#1d8348  ;color:white" : "")">@day</li>
                     }
                 }
             </ol>
@@ -105,7 +125,7 @@
 }
 else
 {
-    <h3>No posee licencias vigentes</h3>
+    <h3>No posee Vacaciones vigentes</h3>
 }
 
 @code {

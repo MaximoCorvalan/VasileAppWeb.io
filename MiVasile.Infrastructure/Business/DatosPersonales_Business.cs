@@ -21,7 +21,7 @@ namespace MiVasile.Infrastructure.Business
             throw new NotImplementedException();
         }
 
-        public Task<DatosPersonalesXUsuario> Find(string key)
+        public async Task<DatosPersonalesXUsuario> Find(string key)
         {
             throw new NotImplementedException();
         }

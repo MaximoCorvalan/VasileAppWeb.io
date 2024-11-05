@@ -64,7 +64,8 @@
 
     .aux {
         display: flex;
-        justify-content: space-between;
+      
+      
     }
 </style>
 
@@ -78,7 +79,7 @@
     }
 
     <div class="conteiner">
-        <div class="aux">
+        <div class="aux" >
             <button @onclick="ShowPreviousMonth" class="button">&lt;</button>
             <h2>@actualYear @currentMonthInfo.MonthName</h2>
             <button class="btnRight" @onclick="ShowNextMonth">&gt;</button>
@@ -105,7 +106,7 @@
                         DateTime currentDate = new DateTime(actualYear, currentMonthInfo.mInt, day);
                         bool isHighlighted = Listlicencia.Any(item => currentDate >= item._fechaIngreso && currentDate <= item._fechaRegreso);
 
-                        <li class="day" style="@(isHighlighted ? "background-color:#0f8112;color:white" : "")">@day</li>
+                        <li class="day" style="@(isHighlighted ? "background-color:#1d8348 ;color:white" : "")">@day</li>
                     }
                 }
             </ol>

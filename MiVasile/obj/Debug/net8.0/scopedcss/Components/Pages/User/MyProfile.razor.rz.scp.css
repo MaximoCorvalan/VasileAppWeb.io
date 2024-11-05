@@ -8,6 +8,7 @@
     background-image: url('https://i.ibb.co/HP15C0D/masthead-watter-bg.png');
     background-size: cover;
     background-repeat: no-repeat;
+
 }
 
 
@@ -19,7 +20,7 @@
 }
 
 .card-user[b-54y20bp2qj] {
-    width: 400px;
+    width: 425px;
     height: 500px;
     background: #fff;
     border-radius: 10px;
@@ -32,6 +33,7 @@
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1), 0 15px 25px rgba(0, 0, 0, 0.05); /* Sombras más profundas */
     transition: all 0.3s ease-out;
     text-decoration: none;
+    padding: 10px;
 }
 
     .card-user img[b-54y20bp2qj] {

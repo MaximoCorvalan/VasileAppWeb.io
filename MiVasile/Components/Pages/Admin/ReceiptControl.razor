@@ -76,7 +76,7 @@
                           clip-rule="evenodd"></path>
                 </svg>
             </button>
-            <button class="button-user mx-2 color-buton-no" @onclick='() => navigationManager.NavigateTo("/user/personaldata")'>
+            <button class="button-user mx-2 color-buton-no" @onclick='() => navigationManager.NavigateTo("/home")'>
                 Cancelar operacion
                 <svg class="icon-button-user" viewBox="0 0 24 24" fill="currentColor">
                     <path fill-rule="evenodd"
@@ -102,11 +102,30 @@
     public Documento Documento { get; set; } = new();
     public string SelectedItem { get; set; } = "Tipo facturación";
 
-    private async Task OnInputFileChange(InputFileChangeEventArgs e)
+    private void OnInputFileChange(InputFileChangeEventArgs e)
     {
         browserFile = e.File;
     }
 
+
+    private async Task<bool> BuscarLegajoPorUsuario()
+    {
+        DatosPersonales_Business datosPersonales_Business = new DatosPersonales_Business();
+        List<DatosPersonalesXUsuario> datosPersonales = new List<DatosPersonalesXUsuario>();
+        DatosPersonalesXUsuario datosPersonalesXUsuario = new DatosPersonalesXUsuario();
+
+        datosPersonales = await datosPersonales_Business.GetAllAsync();
+
+        datosPersonalesXUsuario = datosPersonales.Where(x => x.Legajo == int.Parse(Documento.Legajo_Empleado.ToString())).FirstOrDefault();
+        if (datosPersonalesXUsuario == null)
+        {
+            return false;
+        }
+
+
+        return true;
+
+    }
 
     private async Task<bool> SubirArchivo()
     {
@@ -123,6 +142,13 @@
                 await JS.InvokeVoidAsync("alert", "Debe seleccionar un archivo");
                 return false;
             }
+
+            if(!await BuscarLegajoPorUsuario())
+            {
+                await JS.InvokeVoidAsync("alert", "El legajo no existe");
+                return false;
+            }
+            
 
             var form = new MultipartFormDataContent();
             var archivoStream = browserFile.OpenReadStream();
@@ -141,7 +167,7 @@
             if (response.IsSuccessStatusCode)
             {
                 var message = await response.Content.ReadAsStringAsync();
-                await JS.InvokeVoidAsync("alert", message);
+                await JS.InvokeVoidAsync("alert", "Archivo subido con exito");
                 return true;
             }
             else

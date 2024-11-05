@@ -1,33 +1,68 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Programador2\\Desktop\\VasileAppWeb.io\\MiVasile\\",
+  "WorkspaceRootPath": "C:\\Users\\Programador2\\Desktop\\Proyectos Nico\\_MiVasile\\MiVasile\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A9B79D34-6E29-4295-B103-6F2940690623}|..\\MiVasile.Infrastructure\\MiVasile.Infrastructure.csproj|c:\\users\\programador2\\desktop\\vasileappweb.io\\mivasile.infrastructure\\dataaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DEE4140A-28B0-4C10-A841-FDAD31AD2249}|MiVasile.csproj|c:\\users\\programador2\\desktop\\proyectos nico\\_mivasile\\mivasile\\components\\pages\\user\\myreceipts.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DEE4140A-28B0-4C10-A841-FDAD31AD2249}|MiVasile.csproj|solutionrelative:components\\pages\\user\\myreceipts.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Programador2\\Desktop\\Proyectos Nico\\_MiVasile\\MiVasile.Infrastructure\\Business\\RolesXUsuario_Business.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A9B79D34-6E29-4295-B103-6F2940690623}|..\\MiVasile.Infrastructure\\MiVasile.Infrastructure.csproj|c:\\users\\programador2\\desktop\\proyectos nico\\_mivasile\\mivasile.infrastructure\\dataaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DEE4140A-28B0-4C10-A841-FDAD31AD2249}|MiVasile.csproj|c:\\users\\programador2\\desktop\\vasileappweb.io\\mivasile\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DEE4140A-28B0-4C10-A841-FDAD31AD2249}|MiVasile.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DEE4140A-28B0-4C10-A841-FDAD31AD2249}|MiVasile.csproj|c:\\users\\programador2\\desktop\\proyectos nico\\_mivasile\\mivasile\\components\\pages\\admin\\registerlicense.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DEE4140A-28B0-4C10-A841-FDAD31AD2249}|MiVasile.csproj|solutionrelative:components\\pages\\admin\\registerlicense.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DEE4140A-28B0-4C10-A841-FDAD31AD2249}|MiVasile.csproj|c:\\users\\programador2\\desktop\\vasileappweb.io\\mivasile\\components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{A9B79D34-6E29-4295-B103-6F2940690623}|..\\MiVasile.Infrastructure\\MiVasile.Infrastructure.csproj|c:\\users\\programador2\\desktop\\proyectos nico\\_mivasile\\mivasile.infrastructure\\business\\licenciasbusiness.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DEE4140A-28B0-4C10-A841-FDAD31AD2249}|MiVasile.csproj|c:\\users\\programador2\\desktop\\proyectos nico\\_mivasile\\mivasile\\components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{DEE4140A-28B0-4C10-A841-FDAD31AD2249}|MiVasile.csproj|solutionrelative:components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DEE4140A-28B0-4C10-A841-FDAD31AD2249}|MiVasile.csproj|c:\\users\\programador2\\desktop\\vasileappweb.io\\mivasile\\components\\pages\\user\\license.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{DEE4140A-28B0-4C10-A841-FDAD31AD2249}|MiVasile.csproj|c:\\users\\programador2\\desktop\\proyectos nico\\_mivasile\\mivasile\\components\\pages\\auth\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DEE4140A-28B0-4C10-A841-FDAD31AD2249}|MiVasile.csproj|solutionrelative:components\\pages\\auth\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DEE4140A-28B0-4C10-A841-FDAD31AD2249}|MiVasile.csproj|c:\\users\\programador2\\desktop\\proyectos nico\\_mivasile\\mivasile\\components\\layout\\loginlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DEE4140A-28B0-4C10-A841-FDAD31AD2249}|MiVasile.csproj|solutionrelative:components\\layout\\loginlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DEE4140A-28B0-4C10-A841-FDAD31AD2249}|MiVasile.csproj|c:\\users\\programador2\\desktop\\proyectos nico\\_mivasile\\mivasile\\components\\pages\\user\\license.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{DEE4140A-28B0-4C10-A841-FDAD31AD2249}|MiVasile.csproj|solutionrelative:components\\pages\\user\\license.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Programador2\\Desktop\\Proyectos Nico\\_MiVasile\\MiVasile.Infrastructure\\Business\\LicenciasBusiness.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DEE4140A-28B0-4C10-A841-FDAD31AD2249}|MiVasile.csproj|c:\\users\\programador2\\desktop\\proyectos nico\\_mivasile\\mivasile\\components\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DEE4140A-28B0-4C10-A841-FDAD31AD2249}|MiVasile.csproj|solutionrelative:components\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Programador2\\Desktop\\Proyectos Nico\\_MiVasile\\MiVasile.Infrastructure\\DataAccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DEE4140A-28B0-4C10-A841-FDAD31AD2249}|MiVasile.csproj|c:\\users\\programador2\\desktop\\proyectos nico\\_mivasile\\mivasile\\components\\pages\\admin\\receiptcontrol.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DEE4140A-28B0-4C10-A841-FDAD31AD2249}|MiVasile.csproj|solutionrelative:components\\pages\\admin\\receiptcontrol.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Programador2\\Desktop\\Proyectos Nico\\_MiVasile\\MiVasile.Infrastructure\\Business\\Usuarios_Business.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DEE4140A-28B0-4C10-A841-FDAD31AD2249}|MiVasile.csproj|c:\\users\\programador2\\desktop\\proyectos nico\\_mivasile\\mivasile\\components\\pages\\user\\vacation.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DEE4140A-28B0-4C10-A841-FDAD31AD2249}|MiVasile.csproj|solutionrelative:components\\pages\\user\\vacation.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DEE4140A-28B0-4C10-A841-FDAD31AD2249}|MiVasile.csproj|c:\\users\\programador2\\desktop\\proyectos nico\\_mivasile\\mivasile\\components\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DEE4140A-28B0-4C10-A841-FDAD31AD2249}|MiVasile.csproj|solutionrelative:components\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DEE4140A-28B0-4C10-A841-FDAD31AD2249}|MiVasile.csproj|c:\\users\\programador2\\desktop\\proyectos nico\\_mivasile\\mivasile\\components\\pages\\admin\\newuser.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DEE4140A-28B0-4C10-A841-FDAD31AD2249}|MiVasile.csproj|solutionrelative:components\\pages\\admin\\newuser.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DEE4140A-28B0-4C10-A841-FDAD31AD2249}|MiVasile.csproj|c:\\users\\programador2\\desktop\\proyectos nico\\_mivasile\\mivasile\\components\\pages\\user\\personaldata.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DEE4140A-28B0-4C10-A841-FDAD31AD2249}|MiVasile.csproj|solutionrelative:components\\pages\\user\\personaldata.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DEE4140A-28B0-4C10-A841-FDAD31AD2249}|MiVasile.csproj|c:\\users\\programador2\\desktop\\proyectos nico\\_mivasile\\mivasile\\mivasile.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{DEE4140A-28B0-4C10-A841-FDAD31AD2249}|MiVasile.csproj|solutionrelative:mivasile.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DEE4140A-28B0-4C10-A841-FDAD31AD2249}|MiVasile.csproj|c:\\users\\programador2\\desktop\\proyectos nico\\_mivasile\\mivasile\\components\\pages\\user\\myprofile.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DEE4140A-28B0-4C10-A841-FDAD31AD2249}|MiVasile.csproj|solutionrelative:components\\pages\\user\\myprofile.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -37,105 +72,206 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "MiVasile.csproj",
+              "DocumentMoniker": "C:\\Users\\Programador2\\Desktop\\Proyectos Nico\\_MiVasile\\MiVasile\\MiVasile.csproj",
+              "RelativeDocumentMoniker": "MiVasile.csproj",
+              "ToolTip": "C:\\Users\\Programador2\\Desktop\\Proyectos Nico\\_MiVasile\\MiVasile\\MiVasile.csproj",
+              "RelativeToolTip": "MiVasile.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-11-04T21:07:00.903Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "LoginLayout.razor",
+              "DocumentMoniker": "C:\\Users\\Programador2\\Desktop\\Proyectos Nico\\_MiVasile\\MiVasile\\Components\\Layout\\LoginLayout.razor",
+              "RelativeDocumentMoniker": "Components\\Layout\\LoginLayout.razor",
+              "ToolTip": "C:\\Users\\Programador2\\Desktop\\Proyectos Nico\\_MiVasile\\MiVasile\\Components\\Layout\\LoginLayout.razor",
+              "RelativeToolTip": "Components\\Layout\\LoginLayout.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-04T21:06:52.298Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "MainLayout.razor",
+              "DocumentMoniker": "C:\\Users\\Programador2\\Desktop\\Proyectos Nico\\_MiVasile\\MiVasile\\Components\\Layout\\MainLayout.razor",
+              "RelativeDocumentMoniker": "Components\\Layout\\MainLayout.razor",
+              "ToolTip": "C:\\Users\\Programador2\\Desktop\\Proyectos Nico\\_MiVasile\\MiVasile\\Components\\Layout\\MainLayout.razor",
+              "RelativeToolTip": "Components\\Layout\\MainLayout.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-04T21:06:51.067Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "NewUser.razor",
+              "DocumentMoniker": "C:\\Users\\Programador2\\Desktop\\Proyectos Nico\\_MiVasile\\MiVasile\\Components\\Pages\\Admin\\NewUser.razor",
+              "RelativeDocumentMoniker": "Components\\Pages\\Admin\\NewUser.razor",
+              "ToolTip": "C:\\Users\\Programador2\\Desktop\\Proyectos Nico\\_MiVasile\\MiVasile\\Components\\Pages\\Admin\\NewUser.razor",
+              "RelativeToolTip": "Components\\Pages\\Admin\\NewUser.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-04T20:59:45.482Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "PersonalData.razor",
+              "DocumentMoniker": "C:\\Users\\Programador2\\Desktop\\Proyectos Nico\\_MiVasile\\MiVasile\\Components\\Pages\\User\\PersonalData.razor",
+              "RelativeDocumentMoniker": "Components\\Pages\\User\\PersonalData.razor",
+              "ToolTip": "C:\\Users\\Programador2\\Desktop\\Proyectos Nico\\_MiVasile\\MiVasile\\Components\\Pages\\User\\PersonalData.razor",
+              "RelativeToolTip": "Components\\Pages\\User\\PersonalData.razor",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-04T20:59:39.961Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "MyProfile.razor",
+              "DocumentMoniker": "C:\\Users\\Programador2\\Desktop\\Proyectos Nico\\_MiVasile\\MiVasile\\Components\\Pages\\User\\MyProfile.razor",
+              "RelativeDocumentMoniker": "Components\\Pages\\User\\MyProfile.razor",
+              "ToolTip": "C:\\Users\\Programador2\\Desktop\\Proyectos Nico\\_MiVasile\\MiVasile\\Components\\Pages\\User\\MyProfile.razor",
+              "RelativeToolTip": "Components\\Pages\\User\\MyProfile.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-04T20:59:35.385Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "License.razor",
+              "DocumentMoniker": "C:\\Users\\Programador2\\Desktop\\Proyectos Nico\\_MiVasile\\MiVasile\\Components\\Pages\\User\\License.razor",
+              "RelativeDocumentMoniker": "Components\\Pages\\User\\License.razor",
+              "ToolTip": "C:\\Users\\Programador2\\Desktop\\Proyectos Nico\\_MiVasile\\MiVasile\\Components\\Pages\\User\\License.razor",
+              "RelativeToolTip": "Components\\Pages\\User\\License.razor",
+              "ViewState": "AgIAADMAAAAAAAAAAAAAABIAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-04T20:59:28.223Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "DataAccess.cs",
-              "DocumentMoniker": "C:\\Users\\Programador2\\Desktop\\VasileAppWeb.io\\MiVasile.Infrastructure\\DataAccess.cs",
-              "RelativeDocumentMoniker": "..\\MiVasile.Infrastructure\\DataAccess.cs",
-              "ToolTip": "C:\\Users\\Programador2\\Desktop\\VasileAppWeb.io\\MiVasile.Infrastructure\\DataAccess.cs",
-              "RelativeToolTip": "..\\MiVasile.Infrastructure\\DataAccess.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABkAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-01T14:12:50.845Z",
+              "Title": "MyReceipts.razor",
+              "DocumentMoniker": "C:\\Users\\Programador2\\Desktop\\Proyectos Nico\\_MiVasile\\MiVasile\\Components\\Pages\\User\\MyReceipts.razor",
+              "RelativeDocumentMoniker": "Components\\Pages\\User\\MyReceipts.razor",
+              "ToolTip": "C:\\Users\\Programador2\\Desktop\\Proyectos Nico\\_MiVasile\\MiVasile\\Components\\Pages\\User\\MyReceipts.razor",
+              "RelativeToolTip": "Components\\Pages\\User\\MyReceipts.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAF4AAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-04T21:08:30.297Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Home.razor",
-              "DocumentMoniker": "C:\\Users\\Programador2\\Desktop\\VasileAppWeb.io\\MiVasile\\Components\\Pages\\Home.razor",
-              "RelativeDocumentMoniker": "Components\\Pages\\Home.razor",
-              "ToolTip": "C:\\Users\\Programador2\\Desktop\\VasileAppWeb.io\\MiVasile\\Components\\Pages\\Home.razor",
-              "RelativeToolTip": "Components\\Pages\\Home.razor",
-              "ViewState": "AgIAABMAAAAAAAAAAAAqwEAAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-31T15:07:53.753Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
               "Title": "LicenciasBusiness.cs",
               "DocumentMoniker": "C:\\Users\\Programador2\\Desktop\\Proyectos Nico\\_MiVasile\\MiVasile.Infrastructure\\Business\\LicenciasBusiness.cs",
-              "RelativeDocumentMoniker": "..\\..\\Proyectos Nico\\_MiVasile\\MiVasile.Infrastructure\\Business\\LicenciasBusiness.cs",
+              "RelativeDocumentMoniker": "..\\MiVasile.Infrastructure\\Business\\LicenciasBusiness.cs",
               "ToolTip": "C:\\Users\\Programador2\\Desktop\\Proyectos Nico\\_MiVasile\\MiVasile.Infrastructure\\Business\\LicenciasBusiness.cs",
-              "RelativeToolTip": "..\\..\\Proyectos Nico\\_MiVasile\\MiVasile.Infrastructure\\Business\\LicenciasBusiness.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAgwB0AAAAIAAAAAAAAAA==",
+              "RelativeToolTip": "..\\MiVasile.Infrastructure\\Business\\LicenciasBusiness.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAIAwwCYAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-31T15:01:46.433Z"
+              "WhenOpened": "2024-11-05T12:00:01.723Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "DataAccess.cs",
-              "DocumentMoniker": "C:\\Users\\Programador2\\Desktop\\Proyectos Nico\\_MiVasile\\MiVasile.Infrastructure\\DataAccess.cs",
-              "RelativeDocumentMoniker": "..\\..\\Proyectos Nico\\_MiVasile\\MiVasile.Infrastructure\\DataAccess.cs",
-              "ToolTip": "C:\\Users\\Programador2\\Desktop\\Proyectos Nico\\_MiVasile\\MiVasile.Infrastructure\\DataAccess.cs",
-              "RelativeToolTip": "..\\..\\Proyectos Nico\\_MiVasile\\MiVasile.Infrastructure\\DataAccess.cs",
-              "ViewState": "AgIAAFoAAAAAAAAAAAAwwFwAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-31T15:10:04.969Z"
+              "DocumentIndex": 11,
+              "Title": "_Imports.razor",
+              "DocumentMoniker": "C:\\Users\\Programador2\\Desktop\\Proyectos Nico\\_MiVasile\\MiVasile\\Components\\_Imports.razor",
+              "RelativeDocumentMoniker": "Components\\_Imports.razor",
+              "ToolTip": "C:\\Users\\Programador2\\Desktop\\Proyectos Nico\\_MiVasile\\MiVasile\\Components\\_Imports.razor",
+              "RelativeToolTip": "Components\\_Imports.razor",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABYAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-04T21:07:59.432Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Programador2\\Desktop\\VasileAppWeb.io\\MiVasile\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\Programador2\\Desktop\\VasileAppWeb.io\\MiVasile\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAIBJwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-31T15:07:42.627Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Usuarios_Business.cs",
-              "DocumentMoniker": "C:\\Users\\Programador2\\Desktop\\Proyectos Nico\\_MiVasile\\MiVasile.Infrastructure\\Business\\Usuarios_Business.cs",
-              "RelativeDocumentMoniker": "..\\..\\Proyectos Nico\\_MiVasile\\MiVasile.Infrastructure\\Business\\Usuarios_Business.cs",
-              "ToolTip": "C:\\Users\\Programador2\\Desktop\\Proyectos Nico\\_MiVasile\\MiVasile.Infrastructure\\Business\\Usuarios_Business.cs",
-              "RelativeToolTip": "..\\..\\Proyectos Nico\\_MiVasile\\MiVasile.Infrastructure\\Business\\Usuarios_Business.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-31T14:53:49.202Z"
+              "DocumentIndex": 10,
+              "Title": "Vacation.razor",
+              "DocumentMoniker": "C:\\Users\\Programador2\\Desktop\\Proyectos Nico\\_MiVasile\\MiVasile\\Components\\Pages\\User\\Vacation.razor",
+              "RelativeDocumentMoniker": "Components\\Pages\\User\\Vacation.razor",
+              "ToolTip": "C:\\Users\\Programador2\\Desktop\\Proyectos Nico\\_MiVasile\\MiVasile\\Components\\Pages\\User\\Vacation.razor",
+              "RelativeToolTip": "Components\\Pages\\User\\Vacation.razor",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-04T21:08:08.649Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "RolesXUsuario_Business.cs",
-              "DocumentMoniker": "C:\\Users\\Programador2\\Desktop\\Proyectos Nico\\_MiVasile\\MiVasile.Infrastructure\\Business\\RolesXUsuario_Business.cs",
-              "RelativeDocumentMoniker": "..\\..\\Proyectos Nico\\_MiVasile\\MiVasile.Infrastructure\\Business\\RolesXUsuario_Business.cs",
-              "ToolTip": "C:\\Users\\Programador2\\Desktop\\Proyectos Nico\\_MiVasile\\MiVasile.Infrastructure\\Business\\RolesXUsuario_Business.cs",
-              "RelativeToolTip": "..\\..\\Proyectos Nico\\_MiVasile\\MiVasile.Infrastructure\\Business\\RolesXUsuario_Business.cs",
-              "ViewState": "AgIAAB8AAAAAAAAAAADwvyUAAAAIAAAAAAAAAA==",
+              "Title": "DataAccess.cs",
+              "DocumentMoniker": "C:\\Users\\Programador2\\Desktop\\Proyectos Nico\\_MiVasile\\MiVasile.Infrastructure\\DataAccess.cs",
+              "RelativeDocumentMoniker": "..\\MiVasile.Infrastructure\\DataAccess.cs",
+              "ToolTip": "C:\\Users\\Programador2\\Desktop\\Proyectos Nico\\_MiVasile\\MiVasile.Infrastructure\\DataAccess.cs",
+              "RelativeToolTip": "..\\MiVasile.Infrastructure\\DataAccess.cs",
+              "ViewState": "AgIAAGYAAAAAAAAAAAAIwH0AAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-31T14:53:38.641Z",
+              "WhenOpened": "2024-11-05T11:54:14.589Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "RegisterLicense.razor",
+              "DocumentMoniker": "C:\\Users\\Programador2\\Desktop\\Proyectos Nico\\_MiVasile\\MiVasile\\Components\\Pages\\Admin\\RegisterLicense.razor",
+              "RelativeDocumentMoniker": "Components\\Pages\\Admin\\RegisterLicense.razor",
+              "ToolTip": "C:\\Users\\Programador2\\Desktop\\Proyectos Nico\\_MiVasile\\MiVasile\\Components\\Pages\\Admin\\RegisterLicense.razor",
+              "RelativeToolTip": "Components\\Pages\\Admin\\RegisterLicense.razor",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAIwFcAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-05T11:59:50.582Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Login.razor",
+              "DocumentMoniker": "C:\\Users\\Programador2\\Desktop\\Proyectos Nico\\_MiVasile\\MiVasile\\Components\\Pages\\Auth\\Login.razor",
+              "RelativeDocumentMoniker": "Components\\Pages\\Auth\\Login.razor",
+              "ToolTip": "C:\\Users\\Programador2\\Desktop\\Proyectos Nico\\_MiVasile\\MiVasile\\Components\\Pages\\Auth\\Login.razor",
+              "RelativeToolTip": "Components\\Pages\\Auth\\Login.razor",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-05T12:08:40.835Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "License.razor",
-              "DocumentMoniker": "C:\\Users\\Programador2\\Desktop\\VasileAppWeb.io\\MiVasile\\Components\\Pages\\User\\License.razor",
-              "RelativeDocumentMoniker": "Components\\Pages\\User\\License.razor",
-              "ToolTip": "C:\\Users\\Programador2\\Desktop\\VasileAppWeb.io\\MiVasile\\Components\\Pages\\User\\License.razor",
-              "RelativeToolTip": "Components\\Pages\\User\\License.razor",
-              "ViewState": "AgIAAGAAAAAAAAAAAAAawIUAAABDAAAAAAAAAA==",
+              "Title": "Home.razor",
+              "DocumentMoniker": "C:\\Users\\Programador2\\Desktop\\Proyectos Nico\\_MiVasile\\MiVasile\\Components\\Pages\\Home.razor",
+              "RelativeDocumentMoniker": "Components\\Pages\\Home.razor",
+              "ToolTip": "C:\\Users\\Programador2\\Desktop\\Proyectos Nico\\_MiVasile\\MiVasile\\Components\\Pages\\Home.razor",
+              "RelativeToolTip": "Components\\Pages\\Home.razor",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAADwAAABCAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-31T14:37:06.722Z"
+              "WhenOpened": "2024-11-05T12:09:11.315Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ReceiptControl.razor",
+              "DocumentMoniker": "C:\\Users\\Programador2\\Desktop\\Proyectos Nico\\_MiVasile\\MiVasile\\Components\\Pages\\Admin\\ReceiptControl.razor",
+              "RelativeDocumentMoniker": "Components\\Pages\\Admin\\ReceiptControl.razor",
+              "ToolTip": "C:\\Users\\Programador2\\Desktop\\Proyectos Nico\\_MiVasile\\MiVasile\\Components\\Pages\\Admin\\ReceiptControl.razor",
+              "RelativeToolTip": "Components\\Pages\\Admin\\ReceiptControl.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADUAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-04T21:08:14.057Z"
             }
           ]
         }

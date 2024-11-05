@@ -17,7 +17,8 @@ namespace MiVasile.Infrastructure
         public static SqlConnection Connection { get; set; }
         static DataAccess()
         {
-            ConnectionString = "Data Source= 200.59.11.53; Initial Catalog= MiVasileAppWeb; User= sa; Password= Vasile123";
+            ConnectionString = "Server=tcp:vasileweb.database.windows.net,1433;Initial Catalog=VasileWebBD;Persist Security Info=False;User ID=Vasile;Password=Vas1234_;" +
+                                "MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
             Connection = new SqlConnection(ConnectionString);
         }
 
@@ -37,9 +38,14 @@ namespace MiVasile.Infrastructure
         {
             try
             {
+                if (Connection.State != System.Data.ConnectionState.Open)
+                {
+                    await Connection.OpenAsync();
+                }
+
                 using (Command = new SqlCommand(sql, Connection))
                 {
-                    return await Command.ExecuteReaderAsync();
+                    return  Command.ExecuteReader();
                 }
             }
             catch (Exception)

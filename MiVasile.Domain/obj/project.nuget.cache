@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "OqiJLp2m7Bg=",
+  "dgSpecHash": "h/oO4uxuUD0=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Programador2\\Desktop\\VasileAppWeb.io\\MiVasile.Domain\\MiVasile.Domain.csproj",
+  "projectFilePath": "C:\\Users\\Programador2\\Desktop\\Proyectos Nico\\_MiVasile\\MiVasile.Domain\\MiVasile.Domain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Programador2\\.nuget\\packages\\microsoft.aspnetcore.authorization\\8.0.0\\microsoft.aspnetcore.authorization.8.0.0.nupkg.sha512",
     "C:\\Users\\Programador2\\.nuget\\packages\\microsoft.aspnetcore.components\\8.0.0\\microsoft.aspnetcore.components.8.0.0.nupkg.sha512",

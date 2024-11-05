@@ -1,5 +1,7 @@
 ﻿@page "/myReceipts"
 @using MiVasile.Infrastructure.Business
+@using Microsoft.AspNetCore.Components
+
 @inject AuthenticationStateProvider authenticationStateProvider
 @inject NavigationManager navigationManager
 @inject IJSRuntime jsRuntime
@@ -10,6 +12,11 @@
 
 <div style="position: relative; top: 50px">
 
+     <div class="filtro">
+        <p>Buscar por mes</p>
+        <input type="month" name="month" @onchange="buscarPorMes" />
+    </div>
+  
     <div class="menuseleccion overflow-hidden">
         @if (Documentos.Count > 0)
         {
@@ -84,9 +91,10 @@
 
 
 @code {
-    
+
     private List<Documento> Documentos { get; set; } = new();
     private List<Claim> Claims { get; set; }
+    private DateTime month;
 
     protected override async Task OnInitializedAsync()
     {
@@ -126,7 +134,24 @@
         }
     }
 
+    public async Task buscarPorMes(ChangeEventArgs e)
+    { 
+        string value = e.Value.ToString();
+        if(string.IsNullOrEmpty(value))
+        {
+            await CargarDocumentosUsuario();
+            return;
+        }
 
+        month = Convert.ToDateTime(e.Value);
+        var documentos = Documentos.Where(x => x.Fecha_Publicacion.Value.Month == month.Month && x.Fecha_Publicacion.Value.Year == month.Year).ToList();
+        Documentos = documentos;
+
+        if (documentos.Count == 0)
+        {
+           await  CargarDocumentosUsuario();
+        }
+    }
 
 
     private  void AbrirDocumento(string url)

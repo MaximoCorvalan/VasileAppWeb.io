@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "SkSRi1Tg0tQ=",
+  "dgSpecHash": "m/kdUbyi6zU=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Programador2\\Desktop\\VasileAppWeb.io\\MiVasile\\MiVasile.csproj",
+  "projectFilePath": "C:\\Users\\Programador2\\Desktop\\Proyectos Nico\\_MiVasile\\MiVasile\\MiVasile.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Programador2\\.nuget\\packages\\blazored.localstorage\\4.5.0\\blazored.localstorage.4.5.0.nupkg.sha512",
     "C:\\Users\\Programador2\\.nuget\\packages\\blazored.sessionstorage\\2.4.0\\blazored.sessionstorage.2.4.0.nupkg.sha512",
