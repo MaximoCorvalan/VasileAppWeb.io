@@ -6,63 +6,83 @@ name: Build and deploy ASP.Net Core app to Azure Web App - vas
 on:
   push:
     branches:
-      - main
-  workflow_dispatch:
+      - main  # Este flujo se activa cuando se realiza un 'push' a la rama 'main'
+  workflow_dispatch:  # Esto permite ejecutar el flujo de trabajo manualmente
 
 jobs:
   build:
-    runs-on: windows-latest
+    runs-on: windows-latest  # Especifica que el trabajo de construcción se ejecutará en un entorno de Windows
 
     steps:
-      - uses: actions/checkout@v4
+      # 1. Realiza el 'checkout' del código fuente
+      - uses: actions/checkout@v4  # Esta acción clona el repositorio en el entorno de GitHub Actions
 
+      # 2. Configura .NET Core
       - name: Set up .NET Core
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: '8.x'
+          dotnet-version: '8.x'  # Define la versión de .NET Core que se utilizará (8.x)
 
+      # 3. Construye la solución de .NET
       - name: Build with dotnet
         run: |
-             cd MiVasile
-             dotnet build MiVasile.sln --configuration Release
+          cd MiVasile  # Navega a la carpeta donde se encuentra la solución
+          dotnet build MiVasile.sln --configuration Release  # Compila la solución en modo Release
 
+      # 4. Verifica si los archivos se publicaron correctamente
+      - name: Verify published files
+        run: |
+          echo "Listing files in the publish directory"  # Muestra un mensaje para saber qué archivos se están verificando
+          dir ${{github.workspace}}/MiVasile/myapp  # Lista los archivos en el directorio de publicación
+
+      # 5. Publica la aplicación
       - name: dotnet publish
         run: |
-              cd MiVasile
-              dotnet publish MiVasile.sln -c Release -o "myapp"
+          cd MiVasile  # Navega a la carpeta del proyecto
+          dotnet publish MiVasile.sln -c Release -o "${{github.workspace}}/MiVasile/myapp"  # Publica la solución en modo Release
 
+      # 6. Sube el artefacto de la aplicación para su despliegue
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
         with:
-          name: .net-app
-          path: ${{env.DOTNET_ROOT}}/myapp
+          name: .net-app  # Nombre del artefacto que se subirá
+          path: ${{github.workspace}}/MiVasile/myapp  # La ruta del directorio de archivos que contiene la publicación
 
   deploy:
-    runs-on: windows-latest
-    needs: build
+    runs-on: windows-latest  # Este trabajo se ejecutará en un entorno Windows también
+    needs: build  # El trabajo de despliegue depende del trabajo de construcción
     environment:
-      name: 'Production'
-      url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
+      name: 'Production'  # El entorno de despliegue es 'Production'
+      url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}  # URL del entorno de despliegue
     permissions:
-      id-token: write #This is required for requesting the JWT
+      id-token: write  # Necesario para solicitar el JWT (JSON Web Token) para la autenticación
 
     steps:
+      # 1. Descarga el artefacto del trabajo de construcción
       - name: Download artifact from build job
         uses: actions/download-artifact@v4
         with:
-          name: .net-app
-      
+          name: .net-app  # Nombre del artefacto que se descargará
+
+      # 2. Verifica que el artefacto se haya descargado correctamente
+      - name: Verify downloaded files
+        run: |
+          echo "Listing files in the downloaded artifact directory"  # Mensaje de verificación
+          dir ${{github.workspace}}/MiVasile/myapp  # Lista los archivos descargados para asegurarse de que estén presentes
+
+      # 3. Realiza el login a Azure
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_E999C65ACB044FD9BDE932E24818C32C }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_C2BE526545264FFFA71A2D2326646ACE }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_6D62FAF9208444DCA64A0E9A0E19A1AC }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_E999C65ACB044FD9BDE932E24818C32C }}  # ID del cliente de Azure
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_C2BE526545264FFFA71A2D2326646ACE }}  # ID del arrendador de Azure
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_6D62FAF9208444DCA64A0E9A0E19A1AC }}  # ID de suscripción de Azure
 
+      # 4. Despliega la aplicación en Azure Web App
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v3
         with:
-          app-name: 'vas'
-          slot-name: 'Production'
-          package: .
+          app-name: 'vas'  # Nombre de la aplicación en Azure
+          slot-name: 'Production'  # Nombre del slot de producción en Azure
+          package: ${{github.workspace}}/MiVasile/myapp  # Ruta del paquete a desplegar (la aplicación publicada)
